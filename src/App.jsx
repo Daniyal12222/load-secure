@@ -1,13 +1,20 @@
 import Navbar from "./components/navear"
 import OderSide from "./components/orders/sidebar"
+import { useState } from "react"
 
 function App() {
 
+
   return (
-    <div className="w-full h-[100vh] flex bg-gray-100">
+    <div className="w-full h-[100vh] relative flex bg-gray-100">
       <OderSide />
-      <div className="w-4/5 flex flex-col h-[100vh] overflow-y-auto orders">
+      <div className="hidden md:block">
+      </div>
+      <div className=" w-full md:w-4/5 flex flex-col h-[100vh] overflow-y-auto orders">
         <Navbar />  {/* Add your navigation bar here */}
+        <div className=" md:hidden">
+          <OderSide />
+        </div>
         {/* search bar */}
         <div className="w-full   px-3 bg-gray-100   py-2">
           <div className="p-3 flex justify-between items-center bg-white rounded-md">
@@ -28,9 +35,15 @@ function App() {
               Add New
             </button>
           </div>
-          <div className="w-full flex justify-center items-center  mt-3">
-            <div className="w-full px-3 bg-white py-3 rounded-md">
-              <table className="w-full bg-white rounded-md overflow-x-auto ">
+          <div className="w-full flex justify-center items-center relative  mt-3">
+            <div className="w-20 h-20 bg-amber-400 rounded-full fixed right-14 bottom-14 flex justify-center items-center cursor-pointer">
+              <p><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-10">
+                <path fill-rule="evenodd" d="M12 2.25c-2.429 0-4.817.178-7.152.521C2.87 3.061 1.5 4.795 1.5 6.741v6.018c0 1.946 1.37 3.68 3.348 3.97.877.129 1.761.234 2.652.316V21a.75.75 0 0 0 1.28.53l4.184-4.183a.39.39 0 0 1 .266-.112c2.006-.05 3.982-.22 5.922-.506 1.978-.29 3.348-2.023 3.348-3.97V6.741c0-1.947-1.37-3.68-3.348-3.97A49.145 49.145 0 0 0 12 2.25ZM8.25 8.625a1.125 1.125 0 1 0 0 2.25 1.125 1.125 0 0 0 0-2.25Zm2.625 1.125a1.125 1.125 0 1 1 2.25 0 1.125 1.125 0 0 1-2.25 0Zm4.875-1.125a1.125 1.125 0 1 0 0 2.25 1.125 1.125 0 0 0 0-2.25Z" clip-rule="evenodd" />
+              </svg>
+              </p>
+            </div>
+            <div className="w-full px-3 bg-white py-3 rounded-md overflow-x-auto">
+              <table className="w-full bg-white rounded-md  ">
                 <thead>
                   <tr className="bg-neutral-100 px-2 py-2">
                     <td className="text-sm text-center text-neutral-500 p-3">Employee Status</td>
@@ -160,6 +173,26 @@ function App() {
                   </tr>
                 </tbody>
               </table>
+              <div className="w-full flex justify-between items-center mt-4">
+                <div className="flex gap-6 items-center">
+                  <p className="text-neutral-500"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-4">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
+                  </svg>
+                  </p>
+                  <p>1</p>
+                  <p>2</p>
+                  <p>3</p>
+                  <p>...</p>
+                  <p>10</p>
+                  <p><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-4">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+                  </svg>
+                  </p>
+                </div>
+                <div>
+                  <p className="text-neutral-500">Showing 10 to 8 of 50 results</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
