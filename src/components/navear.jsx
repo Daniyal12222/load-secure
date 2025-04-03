@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import avatar from '../assets/profile.png';
+import { Link } from 'react-router-dom';
 
 function Navbar() {
     const location = useLocation();
@@ -11,7 +12,7 @@ function Navbar() {
     }, [location.pathname]);
 
     const navItems = [
-        { name: 'Order', path: '/order' },
+        { name: 'Order', path: '/' },
         { name: 'Drivers', path: '/drivers' },
         { name: 'Shippers', path: '/shippers' },
         { name: 'Users', path: '/users' },
@@ -28,12 +29,13 @@ function Navbar() {
                     {/* Navigation Items */}
                     <ul className="hidden md:flex space-x-6">
                         {navItems.map((item) => (
-                            <li 
+                            <Link to={item.path}  
                                 key={item.path} 
                                 className={`cursor-pointer text-sm md:text-base ${activePage === item.path ? 'font-bold text-amber-400 underline' : 'hover:text-amber-400'}`}
+                                style={{color: "gray" ,}}
                             >
                                 {item.name}
-                            </li>
+                            </Link>
                         ))}
                     </ul>
                     {/* Mobile Menu Button */}
