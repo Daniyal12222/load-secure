@@ -1,8 +1,18 @@
 import Navbar from "./components/navear";
 import OderSide from "./components/orders/sidebar";
 import { useState } from "react";
+import Driver from "./driver";
+import { useNavigate } from "react-router-dom";
+
 
 function App() {
+  const navigate = useNavigate();
+
+  const handleClick = () => {
+    navigate('/details', { replace: true });
+  };
+
+
   return (
     <div className="w-full h-[100vh] relative flex bg-gray-100">
       <OderSide />
@@ -117,7 +127,7 @@ function App() {
                   </tr>
                 </thead>
                 <tbody>
-                  <tr className="border-b border-neutral-200">
+                  <tr className="border-b border-neutral-200 cursor-pointer" onClick={handleClick} >
                     <td className="p-4 flex justify-center items-center text-sm text-center">
                       <p className="text-green-600">
                         <svg
@@ -165,7 +175,7 @@ function App() {
                       </p>
                     </td>
                   </tr>
-                  <tr className="border-b border-neutral-200">
+                  <tr className="border-b border-neutral-200 cursor-pointer " onClick={handleClick}>
                     <td className="p-4 flex justify-center items-center text-sm text-center">
                       <p className="text-green-600">
                         <svg
@@ -213,7 +223,7 @@ function App() {
                       </p>
                     </td>
                   </tr>
-                  <tr className="border-b border-neutral-200">
+                  <tr className="border-b border-neutral-200 cursor-pointer" onClick={handleClick}>
                     <td className="p-4 flex justify-center items-center text-sm text-center">
                       <p className="text-green-600">
                         <svg
@@ -262,7 +272,7 @@ function App() {
                     </td>
                   </tr>
                   {/* offline */}
-                  <tr className="border-b border-neutral-200">
+                  <tr className="border-b border-neutral-200 cursor-pointer" onClick={handleClick}>
                     <td className="p-4 flex justify-center items-center text-sm text-center">
                       <p className="text-red-600">
                         <svg
@@ -311,7 +321,7 @@ function App() {
                     </td>
                   </tr>
                   {/* online */}
-                  <tr className="border-b border-neutral-200">
+                  <tr className="border-b border-neutral-200 cursor-pointer" onClick={handleClick}>
                     <td className="p-4 flex justify-center items-center text-sm text-center">
                       <p className="text-green-600">
                         <svg
@@ -360,7 +370,7 @@ function App() {
                     </td>
                   </tr>
                   {/* offline */}
-                  <tr className="border-b border-neutral-200">
+                  <tr className="border-b border-neutral-200 cursor-pointer" onClick={handleClick}>
                     <td className="p-4 flex justify-center items-center text-sm text-center">
                       <p className="text-red-600">
                         <svg
