@@ -31,7 +31,7 @@ function Navbar() {
                         {navItems.map((item) => (
                             <Link to={item.path}  
                                 key={item.path} 
-                                className={`cursor-pointer text-sm md:text-base ${activePage === item.path ? 'font-bold text-amber-400 underline' : 'hover:text-amber-400'}`}
+                                className={`cursor-pointer hover:!underline text-sm md:text-base ${activePage === item.path ? '!font-bold !text-amber-400 !underline' : 'hover:!text-amber-400'}`}
                                 style={{color: "gray" ,}}
                             >
                                 {item.name}
