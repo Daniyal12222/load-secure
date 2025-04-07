@@ -1,6 +1,7 @@
 import App from "./App";
 import React from "react";
 import User from "./user";
+import Group from "./group"
 import Login from "./login";
 import Driver from "./driver";
 import Metrics from "./metrics";
@@ -10,7 +11,7 @@ import ReactDOM from "react-dom/client";
 import Details from "./components/orders/details";
 import { BrowserRouter, Routes, Route } from "react-router";
 import ShipmentForm from "./components/shipers/shipmentinfo";
-import Group from "./group"
+import Documents from "./Document"
 
 const root = document.getElementById("root");
 
@@ -27,6 +28,7 @@ ReactDOM.createRoot(root).render(
       <Route path="/companies" element={<Companies />} />
       <Route path="/metrics" element={<Metrics />} />
       <Route path="/group" element={<Group/>} />
+      <Route path="/documents" element={<Documents/>} />
     </Routes>
   </BrowserRouter>
 );
