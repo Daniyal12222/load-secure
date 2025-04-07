@@ -1,44 +1,55 @@
 import { Link, useLocation } from "react-router-dom";
+import { useEffect, useState } from "react";
 import Logo from "../assets/logo.png";
 import avatar from "../assets/profile.png";
 
 function Snavbar() {
-  const location = useLocation();
+  const [activePage, setActivePage] = useState("");
+
+  useEffect(() => {
+    setActivePage(location.pathname);
+  }, [location.pathname]);
+
+  const navItems = [
+    { name: "Order", path: "/" },
+    { name: "Drivers", path: "/drivers" },
+    { name: "Shippers", path: "/shippers" },
+    { name: "Users", path: "/users" },
+    { name: "Companies", path: "/companies" },
+    { name: "Metrics", path: "/metrics" },
+    { name: "Group", path: "/group" },
+    { name: "Documents", path: "/documents" },
+  ];
 
   return (
-    <div className="w-full flex flex-wrap items-center justify-between border-b border-neutral-300 px-3 py-2">
+    <div className="w-full flex flex-wrap bg-white items-center justify-between border-b border-neutral-300 px-3 py-1">
       {/* Logo */}
-      <div className="px-4 py-3">
-        <img src={Logo} alt="Logo" className="w-24 sm:w-32" />
+      <div className="px-4 py-2">
+        <img src={Logo} alt="Logo" className="w-24 sm:w-25" />
       </div>
 
       {/* Navigation Links */}
       <nav className="flex flex-wrap justify-center gap-3 sm:gap-4">
-        {[
-          { name: "Order", path: "/" },
-          { name: "Drivers", path: "/driver" },
-          { name: "Shippers", path: "/shipper" },
-          { name: "Users", path: "/users" },
-          { name: "Companies", path: "/companies" },
-          { name: "Metrics", path: "/metrics" },
-          { name: "Group", path: "/group" },
-          { name: "Documents", path: "/documents" },
-        ].map(({ name, path }) => (
-          <Link
-            key={name}
-            to={path}
-            className={`!text-neutral-700 hover:!text-amber-400  text-[15px] font-light ${
-              location.pathname === path ? "!font-bold !underline" : ""
-            }`}
-            style={{ color: "#000" }} // Ensures black text
-          >
-            {name}
-          </Link>
-        ))}
+        <ul className="hidden md:flex space-x-6">
+          {navItems.map((item) => (
+            <Link
+              to={item.path}
+              key={item.path}
+              className={`cursor-pointer hover:!underline text-sm md:text-base ${
+                activePage === item.path
+                  ? "!font-bold !text-amber-400 !underline"
+                  : "hover:!text-amber-400"
+              }`}
+              style={{ color: "gray" }}
+            >
+              {item.name}
+            </Link>
+          ))}
+        </ul>
       </nav>
 
       {/* Profile & Notifications */}
-      <div className="flex items-center space-x-4">
+      <div  className="flex items-center space-x-4">
         {/* Notification Icon */}
         <div className="relative">
           <svg
@@ -58,7 +69,11 @@ function Snavbar() {
 
         {/* User Profile */}
         <div className="flex items-center space-x-2 px-5">
-          <img src={avatar} className="h-8 w-8 rounded-full" alt="User Avatar" />
+          <img
+            src={avatar}
+            className="h-8 w-8 rounded-full"
+            alt="User Avatar"
+          />
           <p className="text-xs font-semibold text-black">John Doe</p>
         </div>
       </div>

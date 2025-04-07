@@ -1,14 +1,14 @@
+
+import { useState } from "react";
 import Navbar from "./components/navear";
-import ShipperSide from "./components/shipers/sidebar";
-import { useNavigate } from "react-router-dom";
-function Shipper() {
-  const navigate = useNavigate();
-  const handleClick = () => {
-    navigate('/shippers/shipment', { replace: true });
-  };
+import CompSide from "./components/companies/copmSide";
+
+function Companies() {
+    
+
   return (
     <div className="w-full h-[100vh] relative flex bg-gray-100">
-      <ShipperSide />
+      <CompSide />
       <div className=" w-full md:w-4/5 flex flex-col h-[100vh] overflow-y-auto orders">
         <Navbar /> {/* Add your navigation bar here */}
         {/* search bar */}
@@ -81,80 +81,76 @@ function Shipper() {
                 <thead>
                   <tr className="bg-neutral-100 px-2 py-2">
                     <td className="text-sm text-center text-neutral-500 p-3">
-                    Shipper Company Name
+                      Company Name
                     </td>
                     <td className="text-sm text-center text-neutral-500 p-3">
-                    Admin Name
+                      Admin Name
                     </td>
                     <td className="text-sm text-center text-neutral-500 p-3">
-                    Admin Email
+                      Admin Emain
                     </td>
                     <td className="text-sm text-center text-neutral-500 p-3">
-                    Package
+                      Admin Phone
                     </td>
                     <td className="text-sm text-center text-neutral-500 p-3">
-                    Status
+                      Package
+                    </td>
+                    <td className="text-sm text-center text-neutral-500 p-3">
+                      Status
                     </td>
                   </tr>
                 </thead>
                 <tbody>
                   {/* Add your data rows here */}
-                  <tr onClick={handleClick} className="border-b cursor-pointer border-neutral-200">
-                    <td className="p-4 text-sm text-center">JMcDonald's</td>
-                    <td className="p-4 text-sm text-center">Nguyen, Shane</td>
-                    <td className="p-4 text-sm text-center">jackson.graham@example.com</td>
+                  <tr className="border-b border-neutral-200">
+                    <td className="p-4 text-sm text-center">OK</td>
+                    <td className="p-4 text-sm text-center">-</td>
+                    <td className="p-4 text-sm text-center">nathan.roberts@example.com</td>
+                    <td className="p-4 text-sm text-center">(405) 555-0128</td>
+                    <td className="p-4 text-sm text-center">Trial 30</td>
+                    <td className="p-4 text-sm text-center">Active</td>
+                  </tr>
+                  <tr className="border-b border-neutral-200">
+                    <td className="p-4 text-sm text-center">Went City</td>
+                    <td className="p-4 text-sm text-center">City Admin</td>
+                    <td className="p-4 text-sm text-center">nathan.roberts@example.com</td>
+                    <td className="p-4 text-sm text-center">(405) 555-0128</td>
                     <td className="p-4 text-sm text-center">-</td>
                     <td className="p-4 text-sm text-center">-</td>
                   </tr>
                   <tr className="border-b border-neutral-200">
-                    <td className="p-4 text-sm text-center">IBD</td>
-                    <td className="p-4 text-sm text-center">Flores, Juanita</td>
-                    <td className="p-4 text-sm text-center">georgia.young@example.com</td>
+                    <td className="p-4 text-sm text-center">App Comapny</td>
+                    <td className="p-4 text-sm text-center">App Admin</td>
+                    <td className="p-4 text-sm text-center">nathan.roberts@example.com</td>
+                    <td className="p-4 text-sm text-center">(405) 555-0128</td>
                     <td className="p-4 text-sm text-center">-</td>
                     <td className="p-4 text-sm text-center">-</td>
                   </tr>
                   <tr className="border-b border-neutral-200">
-                    <td className="p-4 text-sm text-center">The Walt Disney Company</td>
-                    <td className="p-4 text-sm text-center">Black, Marvin</td>
-                    <td className="p-4 text-sm text-center">kenzi.lawson@example.com</td>
+                    <td className="p-4 text-sm text-center">Fresh Company</td>
+                    <td className="p-4 text-sm text-center">Fresh User</td>
+                    <td className="p-4 text-sm text-center">nathan.roberts@example.com</td>
+                    <td className="p-4 text-sm text-center">(405) 555-0128</td>
                     <td className="p-4 text-sm text-center">-</td>
                     <td className="p-4 text-sm text-center">-</td>
                   </tr>
                   <tr className="border-b border-neutral-200">
-                    <td className="p-4 text-sm text-center">Sony</td>
-                    <td className="p-4 text-sm text-center">Henry, Arthur</td>
-                    <td className="p-4 text-sm text-center">debbie.baker@example.com</td>
+                    <td className="p-4 text-sm text-center">Bixo Company</td>
+                    <td className="p-4 text-sm text-center">Bixio Admin</td>
+                    <td className="p-4 text-sm text-center">nathan.roberts@example.com</td>
+                    <td className="p-4 text-sm text-center">(405) 555-0128</td>
                     <td className="p-4 text-sm text-center">-</td>
                     <td className="p-4 text-sm text-center">-</td>
                   </tr>
                   <tr className="border-b border-neutral-200">
-                    <td className="p-4 text-sm text-center">JMcDonald's</td>
-                    <td className="p-4 text-sm text-center">Nguyen, Shane</td>
-                    <td className="p-4 text-sm text-center">jackson.graham@example.com</td>
+                    <td className="p-4 text-sm text-center">New Company</td>
+                    <td className="p-4 text-sm text-center">Newcamp Admin</td>
+                    <td className="p-4 text-sm text-center">nathan.roberts@example.com</td>
+                    <td className="p-4 text-sm text-center">(405) 555-0128</td>
                     <td className="p-4 text-sm text-center">-</td>
                     <td className="p-4 text-sm text-center">-</td>
                   </tr>
-                  <tr className="border-b border-neutral-200">
-                    <td className="p-4 text-sm text-center">eBay</td>
-                    <td className="p-4 text-sm text-center">Flores, Juanita</td>
-                    <td className="p-4 text-sm text-center">nevaeh.simmons@example.com</td>
-                    <td className="p-4 text-sm text-center">-</td>
-                    <td className="p-4 text-sm text-center">-</td>
-                  </tr>
-                  <tr className="border-b border-neutral-200">
-                    <td className="p-4 text-sm text-center">General Electric</td>
-                    <td className="p-4 text-sm text-center">Miles, Esther</td>
-                    <td className="p-4 text-sm text-center">alma.lawson@example.com</td>
-                    <td className="p-4 text-sm text-center">-</td>
-                    <td className="p-4 text-sm text-center">-</td>
-                  </tr>
-                  <tr className="border-b border-neutral-200">
-                    <td className="p-4 text-sm text-center">Facebook</td>
-                    <td className="p-4 text-sm text-center">Nguyen, Shane</td>
-                    <td className="p-4 text-sm text-center">michael.mitc@example.com</td>
-                    <td className="p-4 text-sm text-center">-</td>
-                    <td className="p-4 text-sm text-center">-</td>
-                  </tr>
+                 
                   {/* Add more data rows as needed */}
                 </tbody>
               </table>
@@ -212,4 +208,4 @@ function Shipper() {
   );
 }
 
-export default Shipper;
+export default Companies;
