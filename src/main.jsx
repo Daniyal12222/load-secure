@@ -10,6 +10,7 @@ import ReactDOM from "react-dom/client";
 import Details from "./components/orders/details";
 import { BrowserRouter, Routes, Route } from "react-router";
 import ShipmentForm from "./components/shipers/shipmentinfo";
+import Group from "./group"
 
 const root = document.getElementById("root");
 
@@ -25,6 +26,7 @@ ReactDOM.createRoot(root).render(
       <Route path="/details" element={<Details />} />
       <Route path="/companies" element={<Companies />} />
       <Route path="/metrics" element={<Metrics />} />
+      <Route path="/group" element={<Group/>} />
     </Routes>
   </BrowserRouter>
 );
