@@ -3,12 +3,16 @@ import { useLocation } from "react-router-dom";
 import avatar from "../assets/profile.png";
 import { Link } from "react-router-dom";
 import Switch from "./darkmode";
+import EditProfile from "./profile";
 
 function Navbar() {
   const location = useLocation();
   const [activePage, setActivePage] = useState("");
   const [theme, setTheme] = useState("light");
   const storedTheme = localStorage.getItem("theme");
+  const [open, setOpen] = useState(false);
+    const handleOpen = () => setOpen(true);
+    const handleClose = () => setOpen(false);
 
   useEffect(() => {
     setActivePage(location.pathname);
@@ -51,8 +55,9 @@ function Navbar() {
 
   return (
     <div
-      className={`w-full dark:bg-amber-400 dark:text-black bg-white shadow-md`}
+      className={`w-full relative dark:bg-amber-400 dark:text-black bg-white shadow-md`}
     >
+       {open && <EditProfile onClose={handleClose} />}
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
           {/* Navigation Items */}
@@ -104,7 +109,7 @@ function Navbar() {
               </svg>
               <div className="w-3 h-3 bg-amber-400 dark:bg-red-500 rounded-full border-2 border-white absolute right-0 top-0"></div>
             </div>
-            <div className="flex items-center space-x-2 p-1">
+            <div onClick={handleOpen} className="flex items-center space-x-2 p-1">
               <img
                 src={avatar}
                 className="h-8 w-8 rounded-full"

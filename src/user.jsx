@@ -74,81 +74,92 @@ function User() {
             <div className="w-full px-3 dark:bg-[#363f42] bg-white py-3 rounded-md overflow-x-auto">
               <table className="w-full bg-white dark:bg-[#363f42] dark:!text-white rounded-md  ">
                 <thead>
-                  <tr className="bg-neutral-100 dark:bg-amber-300  px-2 py-2">
+                  <tr className="bg-neutral-100 dark:bg-amber-400  px-2 py-2">
                     <td className="text-sm text-center text-neutral-500 p-3 dark:text-black">
-                    Shipper Company Name
+                    First Name
                     </td>
                     <td className="text-sm text-center text-neutral-500 p-3 dark:text-black">
-                    Admin Name
+                    Last Name
                     </td>
                     <td className="text-sm text-center text-neutral-500 p-3 dark:text-black">
-                    Admin Email
+                    Email
                     </td>
                     <td className="text-sm text-center text-neutral-500 p-3 dark:text-black">
-                    Package
+                    Phone
                     </td>
                     <td className="text-sm text-center text-neutral-500 p-3 dark:text-black">
-                    Status
+                    Company
+                    </td>
+                    <td className="text-sm text-center text-neutral-500 p-3 dark:text-black">
+                    Role
                     </td>
                   </tr>
                 </thead>
                 <tbody>
                   {/* Add your data rows here */}
                   <tr className="border-b border-neutral-200">
-                    <td className="p-4 text-sm text-center">JMcDonald's</td>
-                    <td className="p-4 text-sm text-center">Nguyen, Shane</td>
-                    <td className="p-4 text-sm text-center">jackson.graham@example.com</td>
-                    <td className="p-4 text-sm text-center">-</td>
-                    <td className="p-4 text-sm text-center">-</td>
+                    <td className="p-4 text-xs text-center">Colleen</td>
+                    <td className="p-4 text-xs text-center">Warren</td>
+                    <td className="p-4 text-xs text-center">jackson.graham@example.com</td>
+                    <td className="p-4 text-xs text-center">(405) 555-0128</td>
+                    <td className="p-4 text-xs text-center">Mitsubishi</td>
+                    <td className="p-4 text-xs text-center">Company Admin</td>
                   </tr>
                   <tr className="border-b border-neutral-200">
-                    <td className="p-4 text-sm text-center">IBD</td>
-                    <td className="p-4 text-sm text-center">Flores, Juanita</td>
-                    <td className="p-4 text-sm text-center">georgia.young@example.com</td>
-                    <td className="p-4 text-sm text-center">-</td>
-                    <td className="p-4 text-sm text-center">-</td>
+                    <td className="p-4 text-xs text-center">Esther</td>
+                    <td className="p-4 text-xs text-center">Edwards</td>
+                    <td className="p-4 text-xs text-center">georgia.young@example.com</td>
+                    <td className="p-4 text-xs text-center">(217) 555-0113</td>
+                    <td className="p-4 text-xs text-center">IBN</td>
+                    <td className="p-4 text-xs text-center">Company User</td>
                   </tr>
                   <tr className="border-b border-neutral-200">
-                    <td className="p-4 text-sm text-center">The Walt Disney Company</td>
-                    <td className="p-4 text-sm text-center">Black, Marvin</td>
-                    <td className="p-4 text-sm text-center">kenzi.lawson@example.com</td>
-                    <td className="p-4 text-sm text-center">-</td>
-                    <td className="p-4 text-sm text-center">-</td>
+                    <td className="p-4 text-xs text-center">Max</td>
+                    <td className="p-4 text-xs text-center">Lane</td>
+                    <td className="p-4 text-xs text-center">bill.sanders@example.com</td>
+                    <td className="p-4 text-xs text-center">(671) 555-0110</td>
+                    <td className="p-4 text-xs text-center">Facebook</td>
+                    <td className="p-4 text-xs text-center">Company Admin</td>
                   </tr>
                   <tr className="border-b border-neutral-200">
-                    <td className="p-4 text-sm text-center">Sony</td>
-                    <td className="p-4 text-sm text-center">Henry, Arthur</td>
-                    <td className="p-4 text-sm text-center">debbie.baker@example.com</td>
-                    <td className="p-4 text-sm text-center">-</td>
-                    <td className="p-4 text-sm text-center">-</td>
+                    <td className="p-4 text-xs text-center">Sony</td>
+                    <td className="p-4 text-xs text-center">Henry, Arthur</td>
+                    <td className="p-4 text-xs text-center">debbie.baker@example.com</td>
+                    <td className="p-4 text-xs text-center">-</td>
+                    <td className="p-4 text-xs text-center">-</td>
+                    <td className="p-4 text-xs text-center">-</td>
                   </tr>
                   <tr className="border-b border-neutral-200">
-                    <td className="p-4 text-sm text-center">JMcDonald's</td>
-                    <td className="p-4 text-sm text-center">Nguyen, Shane</td>
-                    <td className="p-4 text-sm text-center">jackson.graham@example.com</td>
-                    <td className="p-4 text-sm text-center">-</td>
-                    <td className="p-4 text-sm text-center">-</td>
+                    <td className="p-4 text-xs text-center">JMcDonald's</td>
+                    <td className="p-4 text-xs text-center">Nguyen, Shane</td>
+                    <td className="p-4 text-xs text-center">jackson.graham@example.com</td>
+                    <td className="p-4 text-xs text-center">-</td>
+                    <td className="p-4 text-xs text-center">-</td>
+                    <td className="p-4 text-xs text-center">-</td>
                   </tr>
                   <tr className="border-b border-neutral-200">
-                    <td className="p-4 text-sm text-center">eBay</td>
-                    <td className="p-4 text-sm text-center">Flores, Juanita</td>
-                    <td className="p-4 text-sm text-center">nevaeh.simmons@example.com</td>
-                    <td className="p-4 text-sm text-center">-</td>
-                    <td className="p-4 text-sm text-center">-</td>
+                    <td className="p-4 text-xs text-center">eBay</td>
+                    <td className="p-4 text-xs text-center">Flores, Juanita</td>
+                    <td className="p-4 text-xs text-center">nevaeh.simmons@example.com</td>
+                    <td className="p-4 text-xs text-center">-</td>
+                    <td className="p-4 text-xs text-center">-</td>
+                    <td className="p-4 text-xs text-center">-</td>
                   </tr>
                   <tr className="border-b border-neutral-200">
-                    <td className="p-4 text-sm text-center">General Electric</td>
-                    <td className="p-4 text-sm text-center">Miles, Esther</td>
-                    <td className="p-4 text-sm text-center">alma.lawson@example.com</td>
-                    <td className="p-4 text-sm text-center">-</td>
-                    <td className="p-4 text-sm text-center">-</td>
+                    <td className="p-4 text-xs text-center">General Electric</td>
+                    <td className="p-4 text-xs text-center">Miles, Esther</td>
+                    <td className="p-4 text-xs text-center">alma.lawson@example.com</td>
+                    <td className="p-4 text-xs text-center">-</td>
+                    <td className="p-4 text-xs text-center">-</td>
+                    <td className="p-4 text-xs text-center">-</td>
                   </tr>
                   <tr className="border-b border-neutral-200">
-                    <td className="p-4 text-sm text-center">Facebook</td>
-                    <td className="p-4 text-sm text-center">Nguyen, Shane</td>
-                    <td className="p-4 text-sm text-center">michael.mitc@example.com</td>
-                    <td className="p-4 text-sm text-center">-</td>
-                    <td className="p-4 text-sm text-center">-</td>
+                    <td className="p-4 text-xs text-center">Facebook</td>
+                    <td className="p-4 text-xs text-center">Nguyen, Shane</td>
+                    <td className="p-4 text-xs text-center">michael.mitc@example.com</td>
+                    <td className="p-4 text-xs text-center">-</td>
+                    <td className="p-4 text-xs text-center">-</td>
+                    <td className="p-4 text-xs text-center">-</td>
                   </tr>
                   {/* Add more data rows as needed */}
                 </tbody>
