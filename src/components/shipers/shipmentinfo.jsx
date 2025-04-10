@@ -61,7 +61,7 @@ export default function ShipmentForm() {
               <p
                 className={`text-xs mt-1 ${
                   step === index + 1
-                    ? "font-semibold text-black"
+                    ? "font-semibold text-black dark:text-white"
                     : "text-neutral-400"
                 }`}
               >

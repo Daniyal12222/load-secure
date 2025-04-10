@@ -1,23 +1,24 @@
 import Navbar from "./components/navear";
 import OderSide from "./components/orders/sidebar";
 import { useNavigate } from "react-router-dom";
-import { useEffect, useState } from 'react';
-
+import { useEffect, useState } from "react";
 
 function App() {
   const navigate = useNavigate();
-  const [theme, setTheme] = useState('light');
+  const [theme, setTheme] = useState("light");
+  const [open, setOpen] = useState(false);
+  const handleOpen = () => setOpen(true);
+  const handleClose = () => setOpen(false);
 
   const handleClick = () => {
-    navigate('/details', { replace: true });
+    navigate("/details", { replace: true });
   };
-  
-
 
   return (
     <div className="w-full h-[100vh] dark:bg-[#363f42] relative flex bg-gray-100">
       <OderSide />
       <div className="hidden md:block"></div>
+      {open && <SearchCompani onClose={handleClose} />}
       <div className=" w-full md:w-5/6 flex flex-col h-[100vh] overflow-y-auto orders">
         <Navbar /> {/* Add your navigation bar here */}
         <div className=" md:hidden">
@@ -49,6 +50,7 @@ function App() {
               />
             </label>
             <button
+              onClick={handleOpen}
               className=" flex gap-3"
               style={{ backgroundColor: "#ffbb00" }}
             >
@@ -128,7 +130,10 @@ function App() {
                   </tr>
                 </thead>
                 <tbody>
-                  <tr className="border-b border-neutral-200 text-xs cursor-pointer" onClick={handleClick} >
+                  <tr
+                    className="border-b border-neutral-200 text-xs cursor-pointer"
+                    onClick={handleClick}
+                  >
                     <td className="p-4 flex justify-center items-center text-sm text-center">
                       <p className="text-green-600">
                         <svg
@@ -152,8 +157,12 @@ function App() {
                     <td className="p-4 text-xs text-center">Driver 1</td>
                     <td className="p-4 text-xs text-center">John</td>
                     <td className="p-4 text-xs text-center">lorem</td>
-                    <td className="p-4 text-xs text-center">02/22/2024 06:38 (EST)</td>
-                    <td className="p-4 text-xs text-center">02/22/2024 06:38 (EST)</td>
+                    <td className="p-4 text-xs text-center">
+                      02/22/2024 06:38 (EST)
+                    </td>
+                    <td className="p-4 text-xs text-center">
+                      02/22/2024 06:38 (EST)
+                    </td>
                     <td className="p-4 cursor-pointer flex justify-center items-center text-sm text-center">
                       <p>
                         <svg
@@ -172,7 +181,10 @@ function App() {
                       </p>
                     </td>
                   </tr>
-                  <tr className="border-b border-neutral-200 cursor-pointer " onClick={handleClick}>
+                  <tr
+                    className="border-b border-neutral-200 cursor-pointer "
+                    onClick={handleClick}
+                  >
                     <td className="p-4 flex justify-center items-center text-sm text-center">
                       <p className="text-green-600">
                         <svg
@@ -220,7 +232,10 @@ function App() {
                       </p>
                     </td>
                   </tr>
-                  <tr className="border-b border-neutral-200 cursor-pointer" onClick={handleClick}>
+                  <tr
+                    className="border-b border-neutral-200 cursor-pointer"
+                    onClick={handleClick}
+                  >
                     <td className="p-4 flex justify-center items-center text-sm text-center">
                       <p className="text-green-600">
                         <svg
@@ -269,7 +284,10 @@ function App() {
                     </td>
                   </tr>
                   {/* offline */}
-                  <tr className="border-b border-neutral-200 cursor-pointer" onClick={handleClick}>
+                  <tr
+                    className="border-b border-neutral-200 cursor-pointer"
+                    onClick={handleClick}
+                  >
                     <td className="p-4 flex justify-center items-center text-sm text-center">
                       <p className="text-red-600">
                         <svg
@@ -318,7 +336,10 @@ function App() {
                     </td>
                   </tr>
                   {/* online */}
-                  <tr className="border-b border-neutral-200 cursor-pointer" onClick={handleClick}>
+                  <tr
+                    className="border-b border-neutral-200 cursor-pointer"
+                    onClick={handleClick}
+                  >
                     <td className="p-4 flex justify-center items-center text-sm text-center">
                       <p className="text-green-600">
                         <svg
@@ -367,7 +388,10 @@ function App() {
                     </td>
                   </tr>
                   {/* offline */}
-                  <tr className="border-b border-neutral-200 cursor-pointer" onClick={handleClick}>
+                  <tr
+                    className="border-b border-neutral-200 cursor-pointer"
+                    onClick={handleClick}
+                  >
                     <td className="p-4 flex justify-center items-center text-sm text-center">
                       <p className="text-red-600">
                         <svg
@@ -472,3 +496,43 @@ function App() {
 }
 
 export default App;
+
+function SearchCompani({ onClose }) {
+  return (
+    <div
+      className="fixed z-20  inset-0 bg-gray-800/70 flex justify-center items-center"
+      onClick={onClose}
+    >
+      <div
+        className="w-[40vw] dark:bg-[#363f42] rounded-md overflow-hidden  bg-white  "
+        onClick={(e) => e.stopPropagation()} // Prevent close when clicking inside
+      >
+        <div className="dark:bg-[#2d353a]  ">
+          <div className="w-full px-3 py-2 bg-amber-400">
+            {" "}
+            <p className="p-2 font-semibold">Search By Company</p>
+          </div>
+          <div className="dark:bg-[#2d353a]  bg-white p-4">
+            <p className="text-xs py-2 dark:text-white">Company</p>
+            <select name="" id="" className="w-full dark:bg-[#2d353a]  border text-xs py-2 px-3 rounded border-neutral-500  dark:!text-white">
+              <option value="">Search by company</option>
+              <option value="">1company 1</option>
+              <option value="">company 2</option>
+            </select>
+            <div className="w-full px-3 py-3 mt-4 flex items-center gap-3 justify-center">
+              <button className="border dark:!border-white dark:text-white dark:!bg-white/0">Reset</button>
+              <button className="!bg-amber-400 "> Find</button>
+            </div>
+          </div>
+        </div>
+        {/* Close Button */}
+        <button
+          onClick={onClose}
+          className="absolute dark:!bg-[#2d353a] dark:text-white top-5 right-5 text-black hover:text-red-500 text-xl font-bold"
+        >
+          ×
+        </button>
+      </div>
+    </div>
+  );
+}

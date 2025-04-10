@@ -5,30 +5,13 @@ import avatar from "../../assets/avatar.jpg";
 import GoogleMapReact from "google-map-react";
 import ActivityFeed from "./copm";
 function Details() {
-  const defaultProps = {
-    center: {
-      lat: 24.87947483314433,
-      lng: 67.06070215767181,
-    },
-    zoom: 11,
-  };
-
   return (
-    <div className="w-full bg-[#fafafa]">
+    <div className="w-full  bg-[#fafafa]">
       <Snavbar />
-      <div className="w-full relative flex justify-center items-center py-6">
-        <div className="absolute top-10 right-8 md:right-30 flex flex-col md:flex-row rounded gap-3 p-2 md:p-4 bg-white shadow-md">
-          <select className="w-full max-w-xs px-4 py-3 border rounded">
-            <option value="in-transit">In-Transit</option>
-          </select>
-          <select className="w-full max-w-xs px-4 py-3 border rounded">
-            <option value="action">Actions</option>
-          </select>
-        </div>
-        <div className=" absolute top-33 right-30">
-          <ActivityFeed />
-        </div>
-        <div className=" absolute top-20 left-20 p-2 rounded flex min-h-10 bg-white  ">
+      <div className="w-full relative dark:bg-[#363f42] flex justify-center items-center py-6">
+        <div className=" w-full gap-2 grid grid-cols-6 p-2">
+          <div className=" relative col-span-4 p-3">
+          <div className=" absolute top-14 left-10 p-2 rounded  dark:bg-[#363f42] dark:text-white flex min-h-10 bg-white  ">
           <p className="px-4 py-2">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -45,69 +28,68 @@ function Details() {
               />
             </svg>
           </p>
-          <div className="py-1">
+          <div className="py-1 ">
             <p className="!text-xl font-bold flex items-center">
               Test 0001
               <p className=" text-sm text-center ms-2 font-light px-2 rounded bg-green-600 text-white">
                 On Time 22.5H
               </p>
             </p>
-            <p className="flex gap-2 items-center font-semibold ">
+            <p className="flex gap-2 items-center text-sm font-semibold ">
               Stop:
-              <p className="text-gray-600 text-sm">
+              <p className="text-gray-600 dark:text-white text-xs">
                 3891 Ranchview Dr. Richardson, California 62639
               </p>
             </p>
-            <p className="flex gap-2 items-center font-semibold ">
+            <p className="flex gap-2 text-sm items-center font-semibold ">
               ETA:
-              <p className="text-gray-600 text-sm"> 2/1/2024 - 09:40 (EST)</p>
+              <p className="text-gray-600 text-xs dark:text-white "> 2/1/2024 - 09:40 (EST)</p>
             </p>
           </div>
         </div>
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d5193.666676219355!2d67.0606807!3d24.8794651!3m2!1i1024!2i768!4f13.1!5e1!3m2!1sen!2s!4v1743693184374!5m2!1sen!2s"
-          width={"90%"}
-          height={400}
-          style={{ border: 0, borderRadius: 10 }}
-          allowFullScreen=""
-          loading="lazy"
-          referrerPolicy="no-referrer-when-downgrade"
-        />
-      </div>
-      <div className="w-full flex gap-4 px-14  py-2">
-        <div className="p-3 rounded-md w-[50%] bg-white border-md">
-          <p className="text-neutral-700 font-semibold p-2">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d5193.666676219355!2d67.0606807!3d24.8794651!3m2!1i1024!2i768!4f13.1!5e1!3m2!1sen!2s!4v1743693184374!5m2!1sen!2s"
+              width={"100%"}
+              height={400}
+              style={{ border: 0, borderRadius: 10 }}
+              allowFullScreen=""
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            />
+            <div className="w-full mt-4">
+              <div className="p-3 rounded-md dark:bg-[#2d353a] dark:text-white  bg-white border-md">
+          <p className="text-neutral-700 dark:text-white font-semibold p-2">
             Order Information
           </p>
           <div className="flex ">
             <table className="text-xs mt-4 mr-2">
               <tr>
                 <td className="px-2 py-2 text-neutral-500">Created At</td>
-                <td className=" py-2 text-neutral-900">01/31/2024 09:25</td>
+                <td className=" py-2 text-neutral-900 dark:text-white">01/31/2024 09:25</td>
               </tr>
               <tr>
                 <td className="px-2 py-2 text-neutral-500">Created By</td>
-                <td className=" py-2 text-neutral-900">Shakeel Ahmad</td>
+                <td className=" py-2 text-neutral-900 dark:text-white">Shakeel Ahmad</td>
               </tr>
               <tr>
                 <td className="px-2 py-2 text-neutral-500">Company Name</td>
-                <td className=" py-2 text-neutral-900">TEST001</td>
+                <td className=" py-2 text-neutral-900 dark:text-white">TEST001</td>
               </tr>
               <tr>
                 <td className="px-2 py-2 text-neutral-500">Shipper Name</td>
-                <td className=" py-2 text-neutral-900">John Doe</td>
+                <td className=" py-2 text-neutral-900 dark:text-white">John Doe</td>
               </tr>
               <tr>
                 <td className="px-2 py-2 text-neutral-500">
                   Pick-Up Address 1
                 </td>
-                <td className=" py-2 text-neutral-900">
+                <td className=" py-2 text-neutral-900 dark:text-white">
                   1901 Thornridge Cir. Shiloh, Hawaii 81063
                 </td>
               </tr>
               <tr>
                 <td className="px-2 py-2 text-neutral-500">Drop-Off Address</td>
-                <td className=" py-2 text-neutral-900">
+                <td className=" py-2 text-neutral-900 dark:text-white">
                   3891 Ranchview Dr. Richardson, California 62639
                 </td>
               </tr>
@@ -137,31 +119,31 @@ function Details() {
             <table className="text-xs">
               <tr>
                 <td className="px-2 py-2 text-neutral-500">Carrier</td>
-                <td className=" py-2 text-neutral-900">Sayyam</td>
+                <td className=" py-2 text-neutral-900 dark:text-white">Sayyam</td>
               </tr>
               <tr>
                 <td className="px-2 py-2 text-neutral-500">On Behalf</td>
-                <td className=" py-2 text-neutral-900">-</td>
+                <td className=" py-2 text-neutral-900 dark:text-white">-</td>
               </tr>
               <tr>
                 <td className="px-2 py-2 text-neutral-500"></td>
-                <td className=" py-2 text-neutral-900"></td>
+                <td className=" py-2 text-neutral-900 dark:text-white"></td>
               </tr>
               <tr>
                 <td className="px-2 py-2 text-neutral-500"></td>
-                <td className=" py-2 text-neutral-900"></td>
+                <td className=" py-2 text-neutral-900 dark:text-white"></td>
               </tr>
               <tr>
                 <td className="px-2 py-2 text-neutral-500"></td>
-                <td className=" py-2 text-neutral-900"></td>
+                <td className=" py-2 text-neutral-900 dark:text-white"></td>
               </tr>
               <tr>
                 <td className="px-2 py-2 text-neutral-500">Pick-Up Date</td>
-                <td className=" py-2 text-neutral-900">01/03/2024 06:00 AM</td>
+                <td className=" py-2 text-neutral-900 dark:text-white ">01/03/2024 06:00 AM</td>
               </tr>
               <tr>
                 <td className="px-2 py-2 text-neutral-500">Drop-Off Date</td>
-                <td className=" py-2 text-neutral-900">01/02/2024 06:00 AM</td>
+                <td className=" py-2 text-neutral-900 dark:text-white">01/02/2024 06:00 AM</td>
               </tr>
               <tr>
                 <td className="px-2 py-2 text-neutral-500"></td>
@@ -174,8 +156,10 @@ function Details() {
             </table>
           </div>
         </div>
-        <div className="w-[25%]">
-          <div className="px-3 py-2.5 bg-white rounded-md">
+        {/*  */}
+        <div className="w-full mt-4   ">
+        <div className="grid  grid-cols-2  gap-2 ">
+          <div className="px-3 py-2.5 dark:bg-[#2d353a]   dark:text-white bg-white rounded-md">
             <div className="w-full flex justify-between text-sm font-semibold">
               <p>Document</p>
               <p className="text-amber-400">+ Add Document </p>
@@ -186,7 +170,7 @@ function Details() {
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 24 24"
                   fill="currentColor"
-                  className="size-5 text-neutral-700"
+                  className="size-5 dark:text-white text-neutral-700"
                 >
                   <path
                     fill-rule="evenodd"
@@ -205,7 +189,7 @@ function Details() {
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
                 fill="currentColor"
-                class="size-5"
+                class="size-5 "
               >
                 <path
                   fill-rule="evenodd"
@@ -214,13 +198,13 @@ function Details() {
                 />
               </svg>
             </div>
-            <div className="w-full flex justify-between items-center  border-b border-neutral-500 p-2">
+            <div className="w-full flex justify-between items-center   border-b border-neutral-500 p-2">
               <div className="flex text-sm p-3 gap-2">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 24 24"
                   fill="currentColor"
-                  className="size-5 text-neutral-700"
+                  className="size-5 dark:text-white text-neutral-700"
                 >
                   <path
                     fill-rule="evenodd"
@@ -249,7 +233,7 @@ function Details() {
               </svg>
             </div>
           </div>
-          <div className="w-full bg-white rounded-md mt-4">
+          <div className="w-full dark:bg-[#2d353a]   dark:text-white bg-white h-full rounded-md ">
             <div className="w-full py-3  flex justify-between text-sm font-semibold px-3 ">
               <p>Driver</p>
               <p className="text-amber-400 underline">Get Location</p>
@@ -259,7 +243,7 @@ function Details() {
                 Test Driver <span className="mr-5">+1 (234) 567-8900</span>
               </p>
               <p className="flex justify-between">
-                Text Message{" "}
+                Text Message
                 <span className="mr-5">Sent 01/02/24 at 09:00 EST</span>
               </p>
               <p className="flex justify-between">
@@ -274,41 +258,54 @@ function Details() {
             </div>
           </div>
         </div>
-        <div className="  px-3 w-[25%] bg-white rounded-md">
+        </div>
+        </div>
+          </div>
+          <div className="  col-span-2  rounded ">
+          <div className="  flex flex-col md:flex-row p-3 dark:bg-[#2d353a]   dark:text-white bg-white rounded gap-3    ">
+          <select className="w-full max-w-xs px-4 py-3 border rounded">
+            <option value="in-transit">In-Transit</option>
+          </select>
+          <select className="w-full max-w-xs px-4 py-3 border rounded">
+            <option value="action">Actions</option>
+          </select>
+        </div>
+        <div><ActivityFeed /></div>
+        <div className=" mt-4 px-3 dark:bg-[#2d353a]   dark:text-white bg-white rounded-md">
           <div className="w-full border-b border-gray-400 flex items-end gap-2 p-2">
             <div className=" relative  rounded-full   border border-gray-300">
               <img src={avatar} className="w-11 rounded-full h-11" alt="" />
               <div className="w-3 h-3 top-0 right-0 absolute bg-green-500 rounded-full border-2 border-white"></div>
             </div>
             <div className="py-1">
-              <p className="text-neutral-900 text-xs font-semibold">
+              <p className="text-neutral-900 text-xs dark:text-white font-semibold">
                 lorem ipsum name
               </p>
-              <p className="text-xs text-neutral-600">Online</p>
+              <p className="text-xs text-neutral-600 dark:text-neutral-400">Online</p>
             </div>
           </div>
           <div className=" mt-1 min-h-65 p-2 w-full">
             <div className="w-full flex flex-col items-end justify-end">
-              <p className="text-xs p-3 rounded-t-md rounded-bl-md font-semibold bg-amber-400">
+              <p className="text-xs p-3 rounded-t-md rounded-bl-md font-semibold dark:bg-gray-800 bg-amber-400">
                 Can I request for 3d Video tutorial?
               </p>
               <p className="text-sm mr-1 text-neutral-400 ">05:09 pm</p>
             </div>
             <div className="w-full flex flex-col items-start my-4">
-              <p className="text-xs p-3 rounded-t-md rounded-br-md font-semibold bg-neutral-100">
+              <p className="text-xs p-3 rounded-t-md rounded-br-md font-semibold dark:bg-gray-500 bg-neutral-100">
                 Yes please choose new request option.
               </p>
               <p className="text-sm mr-1 text-neutral-400 ">05:09 pm</p>
             </div>
             <div className="w-full flex flex-col items-end justify-end">
-              <p className="text-xs p-3 rounded-t-md rounded-bl-md font-semibold bg-amber-400">
+              <p className="text-xs p-3 rounded-t-md rounded-bl-md font-semibold dark:bg-gray-800 bg-amber-400">
                 Ah okay, thanks for your information
               </p>
               <p className="text-sm mr-1 text-neutral-400 ">05:09 pm</p>
             </div>
           </div>
           <div className="border-t flex">
-            <div className="flex items-center py-4 gap-3">
+            <div className="flex w-full items-center py-4 gap-3">
               <p className="text-[#94A3B8]">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -327,10 +324,10 @@ function Details() {
               </p>
               <input
                 type="text"
-                className="px-1  w-40 focus:outline-none placeholder:text-sm"
+                className="px-1  w-full focus:outline-none placeholder:text-sm"
                 placeholder="Write message here..."
               />
-              <button className=" !bg-amber-400 text-white w-12 h-12 !p-0 flex justify-center items-center !rounded-full">
+              <button className=" !bg-amber-400 text-white w-16 h-12 !p-0 flex justify-center items-center !rounded-full">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
@@ -347,6 +344,8 @@ function Details() {
                 </svg>
               </button>
             </div>
+          </div>
+        </div>
           </div>
         </div>
       </div>

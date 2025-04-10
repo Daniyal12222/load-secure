@@ -2,19 +2,19 @@ import Snavbar from "./components/snavbar";
 import grid from "./assets/grid.svg";
 function Group() {
   return (
-    <div className="w-full bg-gray-50 min-h-[100vh]">
+    <div className="w-full dark:bg-[#363f42] bg-gray-50 min-h-[100vh]">
       <div className="w-full">
         <Snavbar />
       </div>
       <div className="w-full  py-4 px-6">
-        <div className="bg-white rounded flex w-full p-2">
-          <button className="text-xl  !bg-amber-400 flex items-center gap-2 rounded text-neutral-700 font-semibold">
+        <div className="bg-white dark:bg-[#2d353a] rounded flex w-full p-2">
+          <button className="!text-md text-center !bg-amber-400 flex items-center gap-2 rounded text-neutral-700 font-semibold">
             Group
             <span>
               <img src={grid} alt="" className="w-5 h-5" />
             </span>
           </button>
-          <div className="w-full px-4 flex justify-between items-center bg-white rounded-md">
+          <div className="w-full px-4 flex dark:text-white  justify-between items-center  dark:bg-[#2d353a] bg-white rounded-md">
             <label htmlFor="search" className="w-4/5 relative">
               <p className=" absolute right-3 text-neutral-400 top-1/2 transform -translate-y-1/2">
                 <svg
@@ -38,7 +38,7 @@ function Group() {
               />
             </label>
             <button
-              className=" flex gap-3"
+              className=" flex gap-3 text-black"
               style={{ backgroundColor: "#ffbb00" }}
             >
               <p>
@@ -61,12 +61,12 @@ function Group() {
             </button>
           </div>
         </div>
-        <div className="w-full px-12 py-2 gap-15 justify-center bg-white mt-5 min-h-90 items-center grid grid-cols-2">
-          <table className="border rounded-md border-gray-300">
+        <div className="w-full px-12 py-2  dark:bg-[#2d353a] gap-15 justify-center bg-white mt-5 min-h-90 items-center grid grid-cols-2">
+          <table className="border rounded-md dark:bg-[#2d353a] dark:text-white border-gray-300">
             <thead>
               <tr className="bg-amber-400 rounded   ">
-                <th className="p-3 text-start text-xs">Front Office</th>
-                <th className="p-3 flex  justify-end gap-1 text-xs">
+                <th className="p-3 text-start dark:!text-black text-xs">Front Office</th>
+                <th className="p-3 flex dark:!text-black  justify-end gap-1 text-xs">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
@@ -105,9 +105,9 @@ function Group() {
             </tbody>
           </table>
 
-          <table className="border rounded-md border-gray-300">
+          <table className="border dark:text-white rounded-md border-gray-300">
             <thead>
-              <tr className="bg-amber-400 rounded   ">
+              <tr className="bg-amber-400 dark:text-black rounded   ">
                 <th className="p-3 text-start text-xs">Team 2 group</th>
                 <th className="p-3 flex  justify-end gap-1 text-xs">
                   <svg

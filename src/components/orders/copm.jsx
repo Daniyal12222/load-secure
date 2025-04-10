@@ -11,7 +11,7 @@ const ActivityFeed = () => {
   ];
 
   return (
-    <div className="w-64 bg-white rounded-xl shadow-md p-3 relative">
+    <div className="w-full mt-3 dark:bg-[#2d353a]   dark:text-white bg-white rounded-xl shadow-md p-3 relative">
       <div
         className="flex justify-between items-center cursor-pointer"
         onClick={() => setIsOpen(!isOpen)}
@@ -32,7 +32,7 @@ const ActivityFeed = () => {
                 )}
               </div>
               <div>
-                <p className="text-xs text-gray-700">{activity}</p>
+                <p className="text-xs dark:text-white text-gray-700">{activity}</p>
                 <p className="text-[10px] text-gray-500">2 hours ago</p>
               </div>
             </div>

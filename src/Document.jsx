@@ -9,7 +9,7 @@ function Documents() {
   const handleClose = () => setOpen(false);
 
   return (
-    <div className="w-full relative bg-gray-50  min-h-[100vh]">
+    <div className="w-full relative dark:!bg-[#232728] bg-gray-50  min-h-[100vh]">
       <div className="w-full">
         <Snavbar />
       </div>
@@ -19,11 +19,11 @@ function Documents() {
 
       <div className="w-full py-4 px-6">
         {/* Filter + Search + Add */}
-        <div className="w-full rounded-md flex items-center p-2 bg-white">
+        <div className="w-full rounded-md dark:bg-[#2d353a] dark:text-white  flex items-center p-2 bg-white">
           <div className="flex gap-3 w-70 p-2">
             {/* Type Filter */}
             <div className="relative">
-              <label className="absolute text-xs text-gray-400 bg-white left-3 -top-2">
+              <label className="absolute text-xs text-gray-400 dark:!bg-[#2d353a] dark:text-white bg-white left-3 -top-2">
                 Type
               </label>
               <select className="px-6 py-2 rounded border border-gray-300">
@@ -32,7 +32,7 @@ function Documents() {
             </div>
             {/* Modified Filter */}
             <div className="relative">
-              <label className="absolute text-xs text-gray-400 bg-white left-3 -top-2">
+              <label className="absolute text-xs text-gray-400 dark:!bg-[#2d353a] dark:text-white bg-white left-3 -top-2">
                 Modified
               </label>
               <select className="px-6 py-2 rounded border border-gray-300">
@@ -43,7 +43,7 @@ function Documents() {
 
           {/* Search & Add Button */}
           <div className="w-full">
-            <div className="w-full px-4 flex justify-between items-center bg-white rounded-md">
+            <div className="w-full px-4 flex justify-between dark:bg-[#2d353a] dark:text-white  items-center bg-white rounded-md">
               <label htmlFor="search" className="w-4/5 relative">
                 <p className="absolute right-3 text-neutral-400 top-1/2 transform -translate-y-1/2">
                   <svg
@@ -67,7 +67,7 @@ function Documents() {
                 />
               </label>
               <button
-                className="flex gap-3 px-4 py-2 text-sm rounded"
+                className="flex gap-3 text-black px-4 py-2 text-sm rounded"
                 style={{ backgroundColor: "#ffbb00" }}
               >
                 <svg
@@ -91,19 +91,19 @@ function Documents() {
         </div>
 
         {/* Documents Grid */}
-        <div className="w-full bg-white rounded-md mt-5 p-2">
+        <div className="w-full bg-white dark:bg-[#363f42]   rounded-md mt-5 p-2">
           {/* Template Section */}
           <div className="w-full">
             <div className="w-full px-4 py-2 bg-amber-400 rounded-md">
-              <p className="font-semibold">Template</p>
+              <p className="font-semibold text-black">Template</p>
             </div>
             <div className="w-full grid grid-cols-4">
-              <div className="flex mt-2 p-3">
-                <div className="w-full ps-2 bg-gray-100 flex items-center justify-center">
+              <div className="flex rounded mt-2 p-3">
+                <div className="w-full dark:bg-[#2d353a] dark:text-white ps-2 bg-gray-100 flex items-center justify-center">
                   <img src={pdficon} alt="pdf" className="w-10 h-fit" />
-                  <div className="w-full p-3 text-sm text-gray-600">
+                  <div className="w-full p-3 text-sm dark:text-white text-gray-600">
                     <p className="font-semibold">All Trips</p>
-                    <p className="text-xs text-neutral-500">
+                    <p className="text-xs dark:text-neutral-500 text-neutral-500">
                       Last Activity : 02/02/2024
                     </p>
                   </div>
@@ -155,12 +155,12 @@ function Documents() {
               {/* pdf */}
               <div className="flex mt-2 p-3">
                 <div
-                  className="w-full ps-2 bg-gray-100 flex items-center justify-center cursor-pointer"
+                  className="w-full ps-2 dark:bg-[#2d353a] dark:text-white bg-gray-100 flex items-center justify-center cursor-pointer"
                   onClick={handleOpen}
                 >
                   <img src={pdficon} alt="pdf" className="w-10 h-fit" />
                   <div className="w-full p-3 text-sm text-gray-600">
-                    <p className="font-semibold">All Trips</p>
+                    <p className="font-semibold dark:text-white">All Trips</p>
                     <p className="text-xs text-neutral-500">
                       Last Activity : 02/02/2024
                     </p>
@@ -186,12 +186,12 @@ function Documents() {
               {/* pdf */}
               <div className="flex mt-2 p-3">
                 <div
-                  className="w-full ps-2 bg-gray-100 flex items-center justify-center cursor-pointer"
+                  className="w-full ps-2 dark:bg-[#2d353a] dark:text-white bg-gray-100 flex items-center justify-center cursor-pointer"
                   onClick={handleOpen}
                 >
                   <img src={pdficon} alt="pdf" className="w-10 h-fit" />
                   <div className="w-full p-3 text-sm text-gray-600">
-                    <p className="font-semibold">All Trips</p>
+                    <p className="font-semibold dark:text-white">All Trips</p>
                     <p className="text-xs text-neutral-500">
                       Last Activity : 02/02/2024
                     </p>
@@ -217,12 +217,12 @@ function Documents() {
               {/* pdf */}
               <div className="flex mt-2 p-3">
                 <div
-                  className="w-full ps-2 bg-gray-100 flex items-center justify-center cursor-pointer"
+                  className="w-full ps-2 dark:bg-[#2d353a] dark:text-white bg-gray-100 flex items-center justify-center cursor-pointer"
                   onClick={handleOpen}
                 >
                   <img src={pdficon} alt="pdf" className="w-10 h-fit" />
                   <div className="w-full p-3 text-sm text-gray-600">
-                    <p className="font-semibold">All Trips</p>
+                    <p className="font-semibold dark:text-white">All Trips</p>
                     <p className="text-xs text-neutral-500">
                       Last Activity : 02/02/2024
                     </p>
@@ -248,12 +248,12 @@ function Documents() {
               {/* pdf */}
               <div className="flex mt-2 p-3">
                 <div
-                  className="w-full ps-2 bg-gray-100 flex items-center justify-center cursor-pointer"
+                  className="w-full ps-2 dark:bg-[#2d353a] dark:text-white bg-gray-100 flex items-center justify-center cursor-pointer"
                   onClick={handleOpen}
                 >
                   <img src={pdficon} alt="pdf" className="w-10 h-fit" />
                   <div className="w-full p-3 text-sm text-gray-600">
-                    <p className="font-semibold">All Trips</p>
+                    <p className="font-semibold dark:text-white">All Trips</p>
                     <p className="text-xs text-neutral-500">
                       Last Activity : 02/02/2024
                     </p>
@@ -279,12 +279,12 @@ function Documents() {
               {/* pdf */}
               <div className="flex mt-2 p-3">
                 <div
-                  className="w-full ps-2 bg-gray-100 flex items-center justify-center cursor-pointer"
+                  className="w-full ps-2 dark:bg-[#2d353a] dark:text-white bg-gray-100 flex items-center justify-center cursor-pointer"
                   onClick={handleOpen}
                 >
                   <img src={pdficon} alt="pdf" className="w-10 h-fit" />
                   <div className="w-full p-3 text-sm text-gray-600">
-                    <p className="font-semibold">All Trips</p>
+                    <p className="font-semibold dark:text-white">All Trips</p>
                     <p className="text-xs text-neutral-500">
                       Last Activity : 02/02/2024
                     </p>
@@ -310,12 +310,12 @@ function Documents() {
               {/* pdf */}
               <div className="flex mt-2 p-3">
                 <div
-                  className="w-full ps-2 bg-gray-100 flex items-center justify-center cursor-pointer"
+                  className="w-full ps-2 dark:bg-[#2d353a] dark:text-white bg-gray-100 flex items-center justify-center cursor-pointer"
                   onClick={handleOpen}
                 >
                   <img src={pdficon} alt="pdf" className="w-10 h-fit" />
                   <div className="w-full p-3 text-sm text-gray-600">
-                    <p className="font-semibold">All Trips</p>
+                    <p className="font-semibold dark:text-white">All Trips</p>
                     <p className="text-xs text-neutral-500">
                       Last Activity : 02/02/2024
                     </p>
@@ -341,12 +341,12 @@ function Documents() {
               {/* pdf */}
               <div className="flex mt-2 p-3">
                 <div
-                  className="w-full ps-2 bg-gray-100 flex items-center justify-center cursor-pointer"
+                  className="w-full ps-2 dark:bg-[#2d353a] dark:text-white bg-gray-100 flex items-center justify-center cursor-pointer"
                   onClick={handleOpen}
                 >
                   <img src={pdficon} alt="pdf" className="w-10 h-fit" />
                   <div className="w-full p-3 text-sm text-gray-600">
-                    <p className="font-semibold">All Trips</p>
+                    <p className="font-semibold dark:text-white">All Trips</p>
                     <p className="text-xs text-neutral-500">
                       Last Activity : 02/02/2024
                     </p>
@@ -372,12 +372,12 @@ function Documents() {
               {/* pdf */}
               <div className="flex mt-2 p-3">
                 <div
-                  className="w-full ps-2 bg-gray-100 flex items-center justify-center cursor-pointer"
+                  className="w-full ps-2 dark:bg-[#2d353a] dark:text-white bg-gray-100 flex items-center justify-center cursor-pointer"
                   onClick={handleOpen}
                 >
                   <img src={pdficon} alt="pdf" className="w-10 h-fit" />
                   <div className="w-full p-3 text-sm text-gray-600">
-                    <p className="font-semibold">All Trips</p>
+                    <p className="font-semibold dark:text-white">All Trips</p>
                     <p className="text-xs text-neutral-500">
                       Last Activity : 02/02/2024
                     </p>
@@ -403,12 +403,12 @@ function Documents() {
               {/* pdf */}
               <div className="flex mt-2 p-3">
                 <div
-                  className="w-full ps-2 bg-gray-100 flex items-center justify-center cursor-pointer"
+                  className="w-full ps-2 dark:bg-[#2d353a] dark:text-white bg-gray-100 flex items-center justify-center cursor-pointer"
                   onClick={handleOpen}
                 >
                   <img src={pdficon} alt="pdf" className="w-10 h-fit" />
                   <div className="w-full p-3 text-sm text-gray-600">
-                    <p className="font-semibold">All Trips</p>
+                    <p className="font-semibold dark:text-white">All Trips</p>
                     <p className="text-xs text-neutral-500">
                       Last Activity : 02/02/2024
                     </p>
@@ -434,12 +434,12 @@ function Documents() {
               {/* pdf */}
               <div className="flex mt-2 p-3">
                 <div
-                  className="w-full ps-2 bg-gray-100 flex items-center justify-center cursor-pointer"
+                  className="w-full ps-2 dark:bg-[#2d353a] dark:text-white bg-gray-100 flex items-center justify-center cursor-pointer"
                   onClick={handleOpen}
                 >
                   <img src={pdficon} alt="pdf" className="w-10 h-fit" />
                   <div className="w-full p-3 text-sm text-gray-600">
-                    <p className="font-semibold">All Trips</p>
+                    <p className="font-semibold dark:text-white">All Trips</p>
                     <p className="text-xs text-neutral-500">
                       Last Activity : 02/02/2024
                     </p>
@@ -465,12 +465,12 @@ function Documents() {
               {/* pdf */}
               <div className="flex mt-2 p-3">
                 <div
-                  className="w-full ps-2 bg-gray-100 flex items-center justify-center cursor-pointer"
+                  className="w-full ps-2 dark:bg-[#2d353a] dark:text-white bg-gray-100 flex items-center justify-center cursor-pointer"
                   onClick={handleOpen}
                 >
                   <img src={pdficon} alt="pdf" className="w-10 h-fit" />
                   <div className="w-full p-3 text-sm text-gray-600">
-                    <p className="font-semibold">All Trips</p>
+                    <p className="font-semibold dark:text-white">All Trips</p>
                     <p className="text-xs text-neutral-500">
                       Last Activity : 02/02/2024
                     </p>
@@ -496,12 +496,12 @@ function Documents() {
               {/* pdf */}
               <div className="flex mt-2 p-3">
                 <div
-                  className="w-full ps-2 bg-gray-100 flex items-center justify-center cursor-pointer"
+                  className="w-full ps-2 dark:bg-[#2d353a] dark:text-white bg-gray-100 flex items-center justify-center cursor-pointer"
                   onClick={handleOpen}
                 >
                   <img src={pdficon} alt="pdf" className="w-10 h-fit" />
                   <div className="w-full p-3 text-sm text-gray-600">
-                    <p className="font-semibold">All Trips</p>
+                    <p className="font-semibold dark:text-white">All Trips</p>
                     <p className="text-xs text-neutral-500">
                       Last Activity : 02/02/2024
                     </p>
@@ -537,19 +537,19 @@ export default Documents;
 function PdfD({ onClose }) {
   return (
     <div
-      className="fixed z-20 inset-0 bg-gray-800/70 flex justify-center items-center"
+      className="fixed z-20  inset-0 bg-gray-800/70 flex justify-center items-center"
       onClick={onClose}
     >
       <div
-        className="w-[70vw] grid grid-cols-3 gap-2 bg-white p-5 h-[80vh]"
+        className="w-[60vw] dark:bg-[#363f42] grid grid-cols-3 gap-2 bg-white p-5 h-[80vh]"
         onClick={(e) => e.stopPropagation()} // Prevent close when clicking inside
       >
         {/* Left: Detail */}
         <div className="overflow-y-auto scrollbar col-span-2">
-          <div className="p-4 border mr-2 rounded">
+          <div className="p-4 border bg-white  mr-2 rounded">
             <div className="w-full flex">
               <div className="w-50 p-5 flex justify-center items-center">
-                <img src={logo} className="h-15 w-30" alt="logo" />
+                <img src={logo} className="h-15 w-40" alt="logo" />
               </div>
               <div className="w-full p-4">
                 <p className="text-xs text-end">(808) 555-0111</p>
@@ -615,11 +615,11 @@ function PdfD({ onClose }) {
         </div>
 
         {/* Right: Empty for now */}
-        <div className="rounded p-5 bg-gray-100">
+        <div className="rounded p-5 dark:bg-[#2d353a]  bg-gray-100">
           <div className="w-full px-4 py-2 rounded bg-amber-400 ">
             <p className="font-semibold">History</p>
           </div>
-          <div className="mt-5">
+          <div className="mt-5 dark:text-white">
             <p className="text-xs  font-semibold my-3">Uploaded</p>
             <p className=" text-xs font-">
               Via Portal by Abbi CampA - 02/02/2024
@@ -634,7 +634,7 @@ function PdfD({ onClose }) {
         {/* Close Button */}
         <button
           onClick={onClose}
-          className="absolute top-5 right-5 text-black hover:text-red-500 text-xl font-bold"
+          className="absolute dark:!bg-[#2d353a] dark:text-white top-5 right-5 text-black hover:text-red-500 text-xl font-bold"
         >
           ×
         </button>
