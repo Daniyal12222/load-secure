@@ -3,21 +3,21 @@ import grid from "../../assets/grid.svg";
 
 function UserSide() {
   return (
-    <div className=" w-[100vw] md:w-1/5 md:h-[100vh]  md:overflow-y-auto scrollbar   bg-white">
+    <div className=" w-[100vw] md:w-1/6 dark:bg-[#363f42] md:h-[100vh]  md:overflow-y-auto scrollbar   bg-white">
       {/* logo */}
       <div className="w-full hidden  md:flex justify-center pt-6 relative">
-        <img src={Logo} alt="" className="w-40 " />
+        <img src={Logo} alt="" className="w-30 " />
       </div>
       {/*  */}
       <div className="w-full hidden  md:flex justify-center  pt-6">
-        <div className=" bg-amber-400 flex justify-between items-center px-6 py-4 rounded-2xl w-50">
-          <p className="w-40 text-md font-semibold ">User</p>
+        <div className=" bg-amber-400 flex justify-between items-center px-4 py-2 rounded-lg w-40">
+          <p className="w-30 text-md font-semibold ">User</p>
           <img src={grid} alt="" className="w-5 h-5" />
         </div>
       </div>
       <div className="w-full p-4">
         <div className="px-2">
-          <p className="text-neutral-500">Filter by:</p>
+          <p className="text-neutral-500 dark:!text-white text-xs">Filter by:</p>
         </div>
         <div className="w-full p-4 flex flex-col gap-3">
           <div className="flex items-center gap-3">
@@ -35,7 +35,7 @@ function UserSide() {
                 />
               </svg>
             </p>
-            <p>All</p>
+            <p className="dark:!text-white">All</p>
           </div>
           <div className="flex items-center gap-3">
             <p className="text-amber-400 ">
@@ -52,7 +52,7 @@ function UserSide() {
                 />
               </svg>
             </p>
-            <p>Company</p>
+            <p className="dark:!text-white">Company</p>
           </div>
           <div className="flex items-center gap-3">
             <p className="text-amber-400 ">
@@ -70,7 +70,7 @@ function UserSide() {
                 <path d="M5.082 14.254a8.287 8.287 0 0 0-1.308 5.135 9.687 9.687 0 0 1-1.764-.44l-.115-.04a.563.563 0 0 1-.373-.487l-.01-.121a3.75 3.75 0 0 1 3.57-4.047ZM20.226 19.389a8.287 8.287 0 0 0-1.308-5.135 3.75 3.75 0 0 1 3.57 4.047l-.01.121a.563.563 0 0 1-.373.486l-.115.04c-.567.2-1.156.349-1.764.441Z" />
               </svg>
             </p>
-            <p>Grop</p>
+            <p className="dark:!text-white">Grop</p>
           </div>
         </div>
       </div>

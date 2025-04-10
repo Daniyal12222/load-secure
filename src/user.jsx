@@ -4,13 +4,13 @@ function User() {
   return (
     <div className="w-full h-[100vh] relative flex bg-gray-100">
       <UserSide />
-      <div className=" w-full md:w-4/5 flex flex-col h-[100vh] overflow-y-auto orders">
+      <div className=" w-full md:w-5/6 flex flex-col h-[100vh] overflow-y-auto orders">
         <Navbar /> {/* Add your navigation bar here */}
         {/* search bar */}
-        <div className="w-full   px-3 bg-gray-100   py-2">
-          <div className="p-3 flex justify-between items-center bg-white rounded-md">
+        <div className="w-full dark:bg-[#2d353a]   px-3 bg-gray-100   py-2">
+          <div className="p-3 flex dark:bg-[#363f42] justify-between items-center bg-white rounded-md">
             <label htmlFor="search" className="w-4/5 relative">
-              <p className=" absolute right-3 text-neutral-400 top-1/2 transform -translate-y-1/2">
+              <p className=" absolute right-3 text-neutral-400 dark:text-white top-1/2 transform -translate-y-1/2">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 24 24"
@@ -28,7 +28,7 @@ function User() {
                 type="text"
                 id="search"
                 placeholder="Search Ouders"
-                className=" w-full px-3 py-2 rounded focus:outline-none border border-neutral-300"
+                className=" w-full px-3 py-2 rounded focus:outline-none border dark:placeholder:text-white dark:placeholder:text-xs  border-neutral-300"
               />
             </label>
             <button
@@ -55,7 +55,7 @@ function User() {
             </button>
           </div>
           <div className="w-full flex justify-center items-center relative  mt-3">
-            <div className="w-16 h-16 bg-amber-400 rounded-full fixed right-10 bottom-8 flex justify-center items-center cursor-pointer">
+            <div className="w-14 h-14 dark:!text-white bg-amber-400 rounded-full fixed right-10 bottom-10 flex justify-center items-center cursor-pointer">
               <p>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -71,23 +71,23 @@ function User() {
                 </svg>
               </p>
             </div>
-            <div className="w-full px-3 bg-white py-3 rounded-md overflow-x-auto">
-              <table className="w-full bg-white rounded-md  ">
+            <div className="w-full px-3 dark:bg-[#363f42] bg-white py-3 rounded-md overflow-x-auto">
+              <table className="w-full bg-white dark:bg-[#363f42] dark:!text-white rounded-md  ">
                 <thead>
-                  <tr className="bg-neutral-100 px-2 py-2">
-                    <td className="text-sm text-center text-neutral-500 p-3">
+                  <tr className="bg-neutral-100 dark:bg-amber-300  px-2 py-2">
+                    <td className="text-sm text-center text-neutral-500 p-3 dark:text-black">
                     Shipper Company Name
                     </td>
-                    <td className="text-sm text-center text-neutral-500 p-3">
+                    <td className="text-sm text-center text-neutral-500 p-3 dark:text-black">
                     Admin Name
                     </td>
-                    <td className="text-sm text-center text-neutral-500 p-3">
+                    <td className="text-sm text-center text-neutral-500 p-3 dark:text-black">
                     Admin Email
                     </td>
-                    <td className="text-sm text-center text-neutral-500 p-3">
+                    <td className="text-sm text-center text-neutral-500 p-3 dark:text-black">
                     Package
                     </td>
-                    <td className="text-sm text-center text-neutral-500 p-3">
+                    <td className="text-sm text-center text-neutral-500 p-3 dark:text-black">
                     Status
                     </td>
                   </tr>
@@ -154,7 +154,7 @@ function User() {
                 </tbody>
               </table>
               <div className="w-full flex justify-between items-center mt-4">
-                <div className="flex gap-6 items-center">
+                <div className="flex gap-6 dark:!text-white items-center">
                   <p className="text-neutral-500">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -194,7 +194,7 @@ function User() {
                   </p>
                 </div>
                 <div>
-                  <p className="text-neutral-500">
+                  <p className="text-neutral-500 dark:!text-white text-xs">
                     Showing 10 to 8 of 50 results
                   </p>
                 </div>

@@ -159,7 +159,7 @@ function Shipper() {
                 </tbody>
               </table>
               <div className="w-full flex justify-between items-center mt-4">
-                <div className="flex gap-6 items-center">
+                <div className="flex gap-6 dark:!text-white items-center">
                   <p className="text-neutral-500">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -199,7 +199,7 @@ function Shipper() {
                   </p>
                 </div>
                 <div>
-                  <p className="text-neutral-500">
+                  <p className="text-neutral-500 text-xs dark:!text-white">
                     Showing 10 to 8 of 50 results
                   </p>
                 </div>

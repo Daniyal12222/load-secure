@@ -58,8 +58,8 @@ function Driver() {
             </button>
           </div>
           <div className="w-full flex justify-center items-center relative  mt-3">
-            <div className="w-16 h-16 bg-amber-400 rounded-full fixed right-10 bottom-10 flex justify-center items-center cursor-pointer">
-              <p>
+            <div className="w-14 h-14 bg-amber-400 rounded-full fixed right-10 bottom-10 flex justify-center items-center cursor-pointer">
+              <p className="dark:text-white">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 24 24"
@@ -192,7 +192,7 @@ function Driver() {
                   </p>
                 </div>
                 <div>
-                  <p className="text-neutral-500 text-xs dark:text-white">
+                  <p className="text-neutral-500  text-xs dark:text-white">
                     Showing 10 to 8 of 50 results
                   </p>
                 </div>
