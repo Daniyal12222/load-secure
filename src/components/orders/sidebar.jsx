@@ -86,16 +86,16 @@ function OderSide() {
           {/* sub menu */}
           {openMenu === "Shipment Status" && (
             <div className="w-full flex  flex-col   justify-center  mt-4">
-              <Link to="#" className="py-2 dark:!text-white dark:!text-white dark:!text-white dark:!text-white px-4" style={{ color: "black" }}>
+              <Link to="#" className="py-2 dark:!text-white px-4" style={{ color: "black" }}>
                 Non-Dispatched
               </Link>
-              <Link to="#" className="py-2 dark:!text-white dark:!text-white dark:!text-white dark:!text-white px-3" style={{ color: "black" }}>
+              <Link to="#" className="py-2 dark:!text-white px-3" style={{ color: "black" }}>
                 Dispatched
               </Link>
-              <Link to="#" className="py-2 dark:!text-white dark:!text-white dark:!text-white dark:!text-white px-3" style={{ color: "black" }}>
+              <Link to="#" className="py-2 dark:!text-white px-3" style={{ color: "black" }}>
                 Delivered
               </Link>
-              <Link to="#" className="py-2 dark:!text-white dark:!text-white dark:!text-white dark:!text-white px-3" style={{ color: "black" }}>
+              <Link to="#" className="py-2 dark:!text-white px-3" style={{ color: "black" }}>
                 Expired
               </Link>
             </div>
@@ -157,13 +157,13 @@ function OderSide() {
           {/* sub menu */}
           {openMenu === "On-Time Slots" && (
             <div className="w-full text-xs flex  flex-col  justify-center  mt-4">
-              <Link to="#" className="py-2 dark:!text-white dark:!text-white dark:!text-white px-4" style={{ color: "black" }}>
+              <Link to="#" className="py-2 dark:!text-white  px-4" style={{ color: "black" }}>
                 On-Time
               </Link>
-              <Link to="#" className="py-2 dark:!text-white dark:!text-white dark:!text-white px-3" style={{ color: "black" }}>
+              <Link to="#" className="py-2 dark:!text-white  px-3" style={{ color: "black" }}>
                 At-Risk
               </Link>
-              <Link to="#" className="py-2 dark:!text-white dark:!text-white dark:!text-white px-3" style={{ color: "black" }}>
+              <Link to="#" className="py-2 dark:!text-white  px-3" style={{ color: "black" }}>
                 Late
               </Link>
             </div>
@@ -225,13 +225,13 @@ function OderSide() {
           {/*sub menu */}
           {openMenu === "Driver Status" && (
             <div className="w-full text-xs flex  flex-col  justify-center  mt-4">
-              <Link to="#" className="py-2 dark:!text-white dark:!text-white px-4" style={{ color: "black" }}>
+              <Link to="#" className="py-2 dark:!text-white  px-4" style={{ color: "black" }}>
                 Active
               </Link>
-              <Link to="#" className="py-2 dark:!text-white dark:!text-white px-3" style={{ color: "black" }}>
+              <Link to="#" className="py-2 dark:!text-white  px-3" style={{ color: "black" }}>
                 Inactive
               </Link>
-              <Link to="#" className="py-2 dark:!text-white dark:!text-white px-3" style={{ color: "black" }}>
+              <Link to="#" className="py-2 dark:!text-white  px-3" style={{ color: "black" }}>
                 Not Connected
               </Link>
             </div>
