@@ -6,18 +6,18 @@ function Metrics() {
       <div className="">
         <Snavbar />
       </div>
-      <div className="w-full   h-[calc(100vh - 60px)] flex  gap-3 p-4">
+      <div className="w-full dark:bg-[#363f42]  h-[calc(100vh - 60px)] flex  gap-3 p-4">
         <div className="flex">
           <CalendarComponent />
         </div>
         <div className="w-full">
-          <table className="w-full bg-white rounded-md  ">
+          <table className="w-full dark:bg-[#363f42] dark:text-white bg-white rounded-md  ">
             <thead>
-              <tr className="bg-neutral-100 px-2 py-2">
-                <td className="text-sm text-center text-neutral-500 p-3">
+              <tr className="bg-neutral-100 dark:bg-amber-400 px-2 py-2">
+                <td className="text-sm dark:text-black text-center text-neutral-500 p-3">
                   Results For
                 </td>
-                <td className="text-sm text-center text-neutral-500 p-3">
+                <td className="text-sm dark:text-black text-center text-neutral-500 p-3">
                   Date range
                 </td>
               </tr>

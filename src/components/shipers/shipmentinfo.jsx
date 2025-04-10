@@ -2,22 +2,13 @@ import { useState } from "react";
 import Snavbar from "../snavbar";
 
 export default function ShipmentForm() {
-  // const [formData, setFormData] = useState({
-  //   behalfOf: "Shakeel Ahmad",
-  //   po: "91238",
-  //   shipperPo: "876589765",
-  //   phoneNumber: "",
-  //   driver: "",
-  //   carrier: "",
-  //   shipper: "John Doe",
-  // });
+  const [step, setStep] = useState(1);
 
-  // const handleChange = (e) => {
-  //   setFormData({ ...formData, [e.target.name]: e.target.value });
-  // };
+  const nextStep = () => setStep((prev) => Math.min(prev + 1, 4));
+  const prevStep = () => setStep((prev) => Math.max(prev - 1, 1));
 
   return (
-    <div className="flex flex-col items-center min-h-screen bg-gray-100 ">
+    <div className="flex flex-col dark:bg-[#363f42] items-center min-h-screen bg-gray-100 ">
       <Snavbar />
       <div className="w-full px-30 py-5 relative">
         <div className="w-16 h-16 bg-amber-400 rounded-full fixed right-10 bottom-8 flex justify-center items-center cursor-pointer">
@@ -36,47 +27,64 @@ export default function ShipmentForm() {
             </svg>
           </p>
         </div>
-        <div className=" absolute h-1 w-[75%] top-8 left-42 z-10  bg-gray-400 rounded-full"></div>
-        <div className="w-full flex justify-between z-100 bg-amber-50/0 items-center ">
-          {/* dot */}
-          <div className="flex flex-col justify-center z-100 items-center">
-            <div className="w-7 h-7 rounded-full flex justify-center items-center bg-amber-100">
-              <div className="w-4 h-4 rounded-full bg-amber-400"></div>
-            </div>
-            <p className="font-semibold">Shipper</p>
+        <div className="relative w-full flex items-center justify-between px-8  mt-6">
+          {/* Progress Background Line */}
+          <div className="absolute top-[12px] left-8 right-8 h-1 bg-gray-300 z-0 rounded-full">
+          {/* Filled Progress Line */}
+          <div
+            className=" h-1 bg-amber-400 z-10 rounded-full transition-all duration-500"
+            style={{
+              width:
+                step === 1
+                  ? "0%"
+                  : step === 2
+                  ? "33%"
+                  : step === 3
+                  ? "66%"
+                  : "100%",
+            }}
+          ></div>
           </div>
-          <div className="flex flex-col z-100 justify-center items-center">
-            <div className="w-7 h-7 rounded-full flex justify-center items-center bg-amber-100">
-              <div className="w-4 h-4 rounded-full bg-amber-400"></div>
+
+          {["Shipper", "Pick Up", "Drop Off", "Preview"].map((label, index) => (
+            <div
+              key={index}
+              className="flex flex-col items-center z-20 relative"
+            >
+              <div className="w-7 h-7 rounded-full flex justify-center items-center bg-amber-100">
+                <div
+                  className={`w-4 h-4 rounded-full ${
+                    step > index ? "bg-amber-400" : "bg-gray-300"
+                  }`}
+                ></div>
+              </div>
+              <p
+                className={`text-xs mt-1 ${
+                  step === index + 1
+                    ? "font-semibold text-black"
+                    : "text-neutral-400"
+                }`}
+              >
+                {label}
+              </p>
             </div>
-            <p className="text-sx text-neutral-400">Pick Up</p>
-          </div>
-          <div className="flex flex-col z-100 justify-center items-center">
-            <div className="w-7 h-7 rounded-full flex justify-center items-center bg-amber-100">
-              <div className="w-4 h-4 rounded-full bg-amber-400"></div>
-            </div>
-            <div>
-              <p className="text-sx text-neutral-400">Drop Off</p>
-            </div>
-          </div>
-          <div className="flex flex-col z-100 justify-center items-center">
-            <div className="w-7 h-7 rounded-full flex justify-center items-center bg-amber-100">
-              <div className="w-4 h-4 rounded-full bg-amber-400"></div>
-            </div>
-            <p className="text-sx text-neutral-400">Preview</p>
-          </div>
+          ))}
         </div>
+
         <div className="w-full flex justify-center items-center  py-5">
-          <Preview />
+          {step === 1 && <ShipmentIn nextStep={nextStep} />}
+          {step === 2 && <PickUp nextStep={nextStep} prevStep={prevStep} />}
+          {step === 3 && <DropOff nextStep={nextStep} prevStep={prevStep} />}
+          {step === 4 && <Preview prevStep={prevStep} />}
         </div>
       </div>
     </div>
   );
 }
 
-function ShipmentIn() {
+function ShipmentIn({ nextStep }) {
   return (
-    <div className=" w-[90%] x bg-white py-3 px-5 rounded md:w-[60%]">
+    <div className=" w-[90%]  dark:bg-[#2d353a] bg-white py-3 px-5 rounded md:w-[60%]">
       <h2 className="text-lg font-semibold text-center mb-3">Shipment Info</h2>
       <form className="space-y-3">
         <div>
@@ -136,7 +144,7 @@ function ShipmentIn() {
         </div>
         <button
           type="button"
-          className="text-yellow-500  !bg-white flex gap-2 items-center !text-sm"
+          className="text-yellow-500 dark:!bg-white/0  bg-white flex gap-2 items-center !text-sm"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -177,9 +185,12 @@ function ShipmentIn() {
         </div>
         <div className="flex justify-center gap-5 mt-3">
           <button className="px-3 py-1 !border-black  !font-extralight !bg-white rounded text-sm">
-            Back
+            back
           </button>
-          <button className="px-3 py-1 !bg-yellow-500 !font-extralight dark:text-white rounded text-sm">
+          <button
+            onClick={nextStep}
+            className="px-3 py-1 !bg-yellow-500 !font-extralight dark:text-white rounded text-sm"
+          >
             Next
           </button>
         </div>
@@ -188,14 +199,16 @@ function ShipmentIn() {
   );
 }
 
-function PickUp() {
+function PickUp({ prevStep, nextStep }) {
   return (
-    <div className=" w-[90%] min-h-[60vh] bg-white py-3 px-5 rounded md:w-[60%]">
-      <h2 className="text-lg font-semibold text-center mb-3">Pick Up</h2>
+    <div className=" w-[90%] min-h-[60vh] dark:bg-[#2d353a] bg-white py-3 px-5 rounded md:w-[60%]">
+      <h2 className="text-lg font-semibold text-center dark:text-white mb-3">
+        Pick Up
+      </h2>
       <form className="space-y-3">
         <div className="w-full min-h-[35vh] ">
           <div className="w-full grid gap-4   grid-cols-3">
-            <div>
+            <div className="dark:text-white">
               <label className="block dark:text-white text-gray-700 mb-1 text-sm">
                 Date
               </label>
@@ -254,12 +267,12 @@ function PickUp() {
                 />
               </svg>
             </p>
-            <textarea className=" focus:outline-none text-sm  border rounded-md h-[20vh] !text-black resize-none p-3 w-[100%]">
+            <textarea className=" focus:outline-none text-sm  border rounded-md h-[20vh] text-black dark:text-white resize-none p-3 w-[100%]">
               123 Main St. New York, NY 10001
             </textarea>
           </div>
           <div className="w-full flex">
-            <button className="!text-sm !px-2 !bg-white ms-2 text-amber-400 flex gap-2">
+            <button className="!text-sm  dark:!bg-white/0 !px-2 !bg-white ms-2 text-amber-400 flex gap-2">
               <span>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -278,7 +291,7 @@ function PickUp() {
               </span>
               Add Address
             </button>
-            <button className="!text-sm !px-2 !bg-white ms-2 text-amber-400 flex gap-2">
+            <button className="!text-sm dark:!bg-white/0 !px-2 !bg-white ms-2 text-amber-400 flex gap-2">
               <span>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -297,7 +310,7 @@ function PickUp() {
               </span>
               Add Note
             </button>
-            <button className="!text-sm !px-2 !bg-white ms-2 text-red-400 flex gap-2">
+            <button className="!text-sm dark:!bg-white/0 !px-2 !bg-white ms-2 text-red-400 flex gap-2">
               <span>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -319,10 +332,16 @@ function PickUp() {
           </div>
         </div>
         <div className="flex justify-center gap-5 mt-6">
-          <button className="px-3 py-1 !border-black  !font-extralight !bg-white rounded text-sm">
+          <button
+            onClick={prevStep}
+            className="px-3 py-1 dark:!bg-white/0 dark:text-white dark:!border-white !border-black  !font-extralight !bg-white rounded text-sm"
+          >
             Back
           </button>
-          <button className="px-3 py-1 !bg-yellow-500 !font-extralight dark:text-white rounded text-sm">
+          <button
+            onClick={nextStep}
+            className="px-3 py-1 !bg-yellow-500 !font-extralight dark:text-white rounded text-sm"
+          >
             Next
           </button>
         </div>
@@ -330,9 +349,9 @@ function PickUp() {
     </div>
   );
 }
-function DropOff() {
+function DropOff({ prevStep, nextStep }) {
   return (
-    <div className=" w-[90%] min-h-[60vh] bg-white py-3 px-5 rounded md:w-[60%]">
+    <div className=" w-[90%] dark:bg-[#2d353a] min-h-[60vh] bg-white py-3 px-5 rounded md:w-[60%]">
       <h2 className="text-lg font-semibold text-center mb-3">Drop Off</h2>
       <form className="space-y-3">
         <div className="w-full min-h-[35vh] ">
@@ -372,7 +391,7 @@ function DropOff() {
             </div>
           </div>
           <div className="w-full my-4 relative">
-            <label className="block dark:text-white text-gray-700 mb-1 text-sm">
+            <label className="block dark:text-white  text-gray-700 mb-1 text-sm">
               Drop Off Address
             </label>
             <p className=" absolute right-3 top-8">
@@ -396,12 +415,12 @@ function DropOff() {
                 />
               </svg>
             </p>
-            <textarea className=" focus:outline-none text-sm  border rounded-md h-[20vh] !text-black resize-none p-3 w-[100%]">
+            <textarea className=" focus:outline-none text-sm dark:!text-white  border rounded-md h-[20vh] !text-black resize-none p-3 w-[100%]">
               123 Main St. New York, NY 10001
             </textarea>
           </div>
           <div className="w-full flex">
-            <button className="!text-sm !px-2 !bg-white ms-2 text-amber-400 flex gap-2">
+            <button className="!text-sm  dark:!bg-white/0 !px-2 bg-white ms-2 text-amber-400 flex gap-2">
               <span>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -420,7 +439,7 @@ function DropOff() {
               </span>
               Add Address
             </button>
-            <button className="!text-sm !px-2 !bg-white ms-2 text-red-400 flex gap-2">
+            <button className="!text-sm dark:!bg-white/0 !px-2 !bg-white ms-2 text-red-400 flex gap-2">
               <span>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -442,10 +461,16 @@ function DropOff() {
           </div>
         </div>
         <div className="flex justify-center gap-5 mt-6">
-          <button className="px-3 py-1 !border-black  !font-extralight !bg-white rounded text-sm">
+          <button
+            onClick={prevStep}
+            className="px-3 py-1 dark:!bg-white/0 dark:!text-white dark:!border-white !border-black  !font-extralight !bg-white rounded text-sm"
+          >
             Back
           </button>
-          <button className="px-3 py-1 !bg-yellow-500 !font-extralight dark:text-white rounded text-sm">
+          <button
+            onClick={nextStep}
+            className="px-3 py-1 !bg-yellow-500 !font-extralight dark:text-white rounded text-sm"
+          >
             Next
           </button>
         </div>
@@ -454,65 +479,75 @@ function DropOff() {
   );
 }
 
-function Preview() {
+function Preview({ prevStep }) {
   return (
-    <div className=" w-[90%] min-h-[60vh] bg-white py-3 px-5 rounded md:w-[60%]">
-      <h2 className="text-lg font-semibold text-center mb-3">Preview</h2>
+    <div className=" w-[90%] dark:bg-[#2d353a] min-h-[60vh] bg-white py-3 px-5 rounded md:w-[60%]">
+      <h2 className="text-lg font-semibold text-center dark:text-white mb-3">
+        Preview
+      </h2>
       <div className="w-full">
         <table>
           <tr className="">
-            <th className="text-sm text-start font-medium py-2 px-3 text-neutral-400">
+            <th className="text-xs dark:text-neutral-400 text-start font-medium py-2 px-3 text-neutral-400">
               PO#
             </th>
-            <th className="text-sm text-start font-medium py-2 px-3">12345</th>
+            <th className="text-xs text-start font-medium dark:text-white py-2 px-3">
+              12345
+            </th>
           </tr>
           <tr className="">
-            <th className="text-sm text-start font-medium py-2 px-3 text-neutral-400">
+            <th className="text-xs dark:text-neutral-400 text-start font-medium py-2 px-3 text-neutral-400">
               Shipper PO#
             </th>
-            <th className="text-sm text-start font-medium py-2 px-3">78900</th>
+            <th className="text-xs text-start font-medium dark:text-white py-2 px-3">
+              78900
+            </th>
           </tr>
           <tr className="">
-            <th className="text-sm text-start font-medium py-2 px-3 text-neutral-400">
+            <th className="text-xs dark:text-neutral-400 text-start font-medium py-2 px-3 text-neutral-400">
               carrier Name
             </th>
-            <th className="text-sm text-start font-medium py-2 px-3">--</th>
+            <th className="text-xs text-start font-medium dark:text-white py-2 px-3">
+              --
+            </th>
           </tr>
           <tr className="">
-            <th className="text-sm text-start font-medium py-2 px-3 text-neutral-400">
+            <th className="text-xs dark:text-neutral-400 text-start font-medium py-2 px-3 text-neutral-400">
               Shipper Name
             </th>
-            <th className="text-sm text-start font-medium py-2 px-3">James</th>
+            <th className="text-xs text-start font-medium dark:text-white py-2 px-3">
+              James
+            </th>
           </tr>
           <tr className="">
-            <th className="text-sm text-start font-medium py-2 px-3 text-neutral-400">
+            <th className="text-xs dark:text-neutral-400 text-start font-medium py-2 px-3 text-neutral-400">
               Pick-Up Address 1
             </th>
-            <th className="text-sm text-start font-medium py-2 px-3">
+            <th className="text-xs text-start font-medium dark:text-white py-2 px-3">
               New York, United States
             </th>
           </tr>
           <tr className="">
-            <th className="text-sm text-start font-medium py-2 px-3 text-neutral-400">
+            <th className="text-xs dark:text-neutral-400 text-start font-medium py-2 px-3 text-neutral-400">
               Pick Up Date
             </th>
-            <th className="text-sm text-start font-medium py-2 px-3">
+            <th className="text-xs text-start font-medium dark:text-white py-2 px-3">
               02/01/2024 06:00 (Eastern Time)
             </th>
           </tr>
           <tr className="">
-            <th className="text-sm text-start font-medium py-2 px-3 text-neutral-400">
+            <th className="text-xs dark:text-neutral-400 text-start font-medium py-2 px-3 text-neutral-400">
               Drop-Off Address 1
             </th>
-            <th className="text-sm text-start font-medium py-2 px-3">
+            <th className="text-xs text-start font-medium dark:text-white py-2 px-3">
               8787 Wales Drive, Chichawatni, OH, USA
             </th>
           </tr>
           <tr className="">
-            <th className="text-sm text-start font-medium py-2 px-3 text-neutral-400">
+            <th className="text-xs dark:text-neutral-400 text-start font-medium py-2 px-3 text-neutral-400">
               Drop-Off Date #1{" "}
             </th>
-            <th className="text-sm text-start font-medium py-2 px-3">
+            <th className="text-xs text-start font-medium dark:text-white py-2 px-3">
               02/02/2024 06:00 (Central Time)
             </th>
           </tr>
@@ -522,18 +557,25 @@ function Preview() {
         <label htmlFor="" className="text-xs font-medium">
           Notiy Driver
         </label>
-        <select name="" id="" className="mt-2 focus:outline-none border border-gray-400 p-2 rounded">
+        <select
+          name=""
+          id=""
+          className="mt-2 dark:text-white focus:outline-none border border-gray-400 p-2 rounded"
+        >
           <option value="immediately">Immediately</option>
         </select>
       </div>
       <div className="flex justify-center gap-5 mt-6">
-          <button className="!px-5 py-1 !border-black  !font-extralight !bg-white rounded text-sm">
-            Back
-          </button>
-          <button className="!px-5 py-1 !bg-yellow-500 !font-extralight dark:text-white rounded text-sm">
-            Fnish
-          </button>
-        </div>
+        <button
+          onClick={prevStep}
+          className="px-3 py-1 dark:!bg-white/0 dark:text-white dark:!border-white !border-black  !font-extralight !bg-white rounded text-sm"
+        >
+          Back
+        </button>
+        <button className="!px-5 py-1 !bg-yellow-500 !font-extralight dark:text-white rounded text-sm">
+          Fnish
+        </button>
+      </div>
     </div>
   );
 }

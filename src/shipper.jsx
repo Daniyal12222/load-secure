@@ -9,7 +9,7 @@ function Shipper() {
   return (
     <div className="w-full h-[100vh] relative flex bg-gray-100">
       <ShipperSide />
-      <div className=" w-full md:w-4/5 flex flex-col h-[100vh] overflow-y-auto orders">
+      <div className=" w-full md:w-5/6 flex flex-col h-[100vh] overflow-y-auto orders">
         <Navbar /> {/* Add your navigation bar here */}
         {/* search bar */}
         <div className="w-full dark:bg-[#2d353a]  px-3 bg-gray-100   py-2">

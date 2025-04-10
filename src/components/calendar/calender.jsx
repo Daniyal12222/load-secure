@@ -11,15 +11,16 @@ const CalendarComponent = () => {
   };
 
   return (
-    <div className="p-4 bg-white shadow-md rounded-2xl w-80">
+    <div className="p-4 dark:bg-[#2d353a] dark:text-white bg-white shadow-md rounded-2xl w-80">
       <h2 className="text-center text-lg font-semibold">Metrics</h2>
 
       {/* Dropdown */}
       <div className="mt-3">
-        <select className="w-full p-2 border rounded-md text-gray-700">
-          <option>Select Company</option>
-          <option value="company1">Company 1</option>
-          <option value="company2">Company 2</option>
+        <p className="text-sm py-2">Company</p>
+        <select className="w-full p-2 border  dark:text-white rounded-md text-gray-700">
+          <option className="dark:text-white">Select Company</option>
+          <option className="dark:!text-white" value="company1">Company 1</option>
+          <option className="dark:!text-white" value="company2">Company 2</option>
         </select>
       </div>
 
@@ -52,7 +53,7 @@ const CalendarComponent = () => {
 
       {/* Buttons */}
       <div className="flex justify-between mt-4">
-        <button className="border px-4 py-2 rounded-md">Reset</button>
+        <button className="border px-4 py-2 text-black rounded-md">Reset</button>
         <button className="!bg-yellow-500 text-white px-4 py-2 rounded-md hover:bg-yellow-600">
           Search
         </button>

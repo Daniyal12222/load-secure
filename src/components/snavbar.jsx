@@ -22,7 +22,7 @@ function Snavbar() {
   ];
 
   return (
-    <div className="w-full flex flex-wrap bg-white items-center justify-between border-b border-neutral-300 px-3 py-1">
+    <div className="w-full dark:bg-amber-400 flex flex-wrap bg-white items-center justify-between border-b border-neutral-300 px-3 py-1">
       {/* Logo */}
       <div className="px-4 py-2">
         <img src={Logo} alt="Logo" className="w-24 sm:w-25" />
@@ -37,8 +37,8 @@ function Snavbar() {
               key={item.path}
               className={`cursor-pointer hover:!underline text-sm md:text-base ${
                 activePage === item.path
-                  ? "!font-bold !text-amber-400 !underline"
-                  : "hover:!text-amber-400"
+                  ? "!font-bold !text-amber-400 dark:!text-black !underline"
+                  : "hover:!text-amber-400 dark:hover:!text-black"
               }`}
               style={{ color: "gray" }}
             >
@@ -64,7 +64,7 @@ function Snavbar() {
               clipRule="evenodd"
             />
           </svg>
-          <div className="w-3 h-3 bg-amber-400 rounded-full border-2 border-white absolute right-0 top-0"></div>
+          <div className="w-3 h-3 dark:bg-red-500 bg-amber-400 rounded-full border-2 border-white absolute right-0 top-0"></div>
         </div>
 
         {/* User Profile */}
