@@ -1,9 +1,8 @@
 import { useState } from "react";
 import Snavbar from "../snavbar";
-
+import { useNavigation } from "react-router-dom";
 export default function ShipmentForm() {
   const [step, setStep] = useState(1);
-
   const nextStep = () => setStep((prev) => Math.min(prev + 1, 4));
   const prevStep = () => setStep((prev) => Math.max(prev - 1, 1));
 
@@ -83,6 +82,8 @@ export default function ShipmentForm() {
 }
 
 function ShipmentIn({ nextStep }) {
+ 
+
   return (
     <div className=" w-[90%]  dark:bg-[#2d353a] bg-white py-3 px-5 rounded md:w-[60%]">
       <h2 className="text-lg font-semibold text-center mb-3">Shipment Info</h2>
@@ -184,7 +185,7 @@ function ShipmentIn({ nextStep }) {
           />
         </div>
         <div className="flex justify-center gap-5 mt-3">
-          <button className="px-3 py-1 !border-black  !font-extralight !bg-white rounded text-sm">
+          <button onClick={""} className="px-3 py-1 !border-black  !font-extralight !bg-white rounded text-sm">
             back
           </button>
           <button

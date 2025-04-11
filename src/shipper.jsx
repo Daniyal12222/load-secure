@@ -100,60 +100,60 @@ function Shipper() {
                 <tbody>
                   {/* Add your data rows here */}
                   <tr onClick={handleClick} className="border-b cursor-pointer border-neutral-200">
-                    <td className="p-4 text-sm text-center">JMcDonald's</td>
-                    <td className="p-4 text-sm text-center">Nguyen, Shane</td>
-                    <td className="p-4 text-sm text-center">jackson.graham@example.com</td>
-                    <td className="p-4 text-sm text-center">-</td>
-                    <td className="p-4 text-sm text-center">-</td>
+                    <td className="p-4 text-xs text-center">JMcDonald's</td>
+                    <td className="p-4 text-xs text-center">Nguyen, Shane</td>
+                    <td className="p-4 text-xs text-center">jackson.graham@example.com</td>
+                    <td className="p-4 text-xs text-center">-</td>
+                    <td className="p-4 text-xs text-center">-</td>
                   </tr>
                   <tr className="border-b border-neutral-200">
-                    <td className="p-4 text-sm text-center">IBD</td>
-                    <td className="p-4 text-sm text-center">Flores, Juanita</td>
-                    <td className="p-4 text-sm text-center">georgia.young@example.com</td>
-                    <td className="p-4 text-sm text-center">-</td>
-                    <td className="p-4 text-sm text-center">-</td>
+                    <td className="p-4 text-xs text-center">IBD</td>
+                    <td className="p-4 text-xs text-center">Flores, Juanita</td>
+                    <td className="p-4 text-xs text-center">georgia.young@example.com</td>
+                    <td className="p-4 text-xs text-center">-</td>
+                    <td className="p-4 text-xs text-center">-</td>
                   </tr>
                   <tr className="border-b border-neutral-200">
-                    <td className="p-4 text-sm text-center">The Walt Disney Company</td>
-                    <td className="p-4 text-sm text-center">Black, Marvin</td>
-                    <td className="p-4 text-sm text-center">kenzi.lawson@example.com</td>
-                    <td className="p-4 text-sm text-center">-</td>
-                    <td className="p-4 text-sm text-center">-</td>
+                    <td className="p-4 text-xs text-center">The Walt Disney Company</td>
+                    <td className="p-4 text-xs text-center">Black, Marvin</td>
+                    <td className="p-4 text-xs text-center">kenzi.lawson@example.com</td>
+                    <td className="p-4 text-xs text-center">-</td>
+                    <td className="p-4 text-xs text-center">-</td>
                   </tr>
                   <tr className="border-b border-neutral-200">
-                    <td className="p-4 text-sm text-center">Sony</td>
-                    <td className="p-4 text-sm text-center">Henry, Arthur</td>
-                    <td className="p-4 text-sm text-center">debbie.baker@example.com</td>
-                    <td className="p-4 text-sm text-center">-</td>
-                    <td className="p-4 text-sm text-center">-</td>
+                    <td className="p-4 text-xs text-center">Sony</td>
+                    <td className="p-4 text-xs text-center">Henry, Arthur</td>
+                    <td className="p-4 text-xs text-center">debbie.baker@example.com</td>
+                    <td className="p-4 text-xs text-center">-</td>
+                    <td className="p-4 text-xs text-center">-</td>
                   </tr>
                   <tr className="border-b border-neutral-200">
-                    <td className="p-4 text-sm text-center">JMcDonald's</td>
-                    <td className="p-4 text-sm text-center">Nguyen, Shane</td>
-                    <td className="p-4 text-sm text-center">jackson.graham@example.com</td>
-                    <td className="p-4 text-sm text-center">-</td>
-                    <td className="p-4 text-sm text-center">-</td>
+                    <td className="p-4 text-xs text-center">JMcDonald's</td>
+                    <td className="p-4 text-xs text-center">Nguyen, Shane</td>
+                    <td className="p-4 text-xs text-center">jackson.graham@example.com</td>
+                    <td className="p-4 text-xs text-center">-</td>
+                    <td className="p-4 text-xs text-center">-</td>
                   </tr>
                   <tr className="border-b border-neutral-200">
-                    <td className="p-4 text-sm text-center">eBay</td>
-                    <td className="p-4 text-sm text-center">Flores, Juanita</td>
-                    <td className="p-4 text-sm text-center">nevaeh.simmons@example.com</td>
-                    <td className="p-4 text-sm text-center">-</td>
-                    <td className="p-4 text-sm text-center">-</td>
+                    <td className="p-4 text-xs text-center">eBay</td>
+                    <td className="p-4 text-xs text-center">Flores, Juanita</td>
+                    <td className="p-4 text-xs text-center">nevaeh.simmons@example.com</td>
+                    <td className="p-4 text-xs text-center">-</td>
+                    <td className="p-4 text-xs text-center">-</td>
                   </tr>
                   <tr className="border-b border-neutral-200">
-                    <td className="p-4 text-sm text-center">General Electric</td>
-                    <td className="p-4 text-sm text-center">Miles, Esther</td>
-                    <td className="p-4 text-sm text-center">alma.lawson@example.com</td>
-                    <td className="p-4 text-sm text-center">-</td>
-                    <td className="p-4 text-sm text-center">-</td>
+                    <td className="p-4 text-xs text-center">General Electric</td>
+                    <td className="p-4 text-xs text-center">Miles, Esther</td>
+                    <td className="p-4 text-xs text-center">alma.lawson@example.com</td>
+                    <td className="p-4 text-xs text-center">-</td>
+                    <td className="p-4 text-xs text-center">-</td>
                   </tr>
                   <tr className="border-b border-neutral-200">
-                    <td className="p-4 text-sm text-center">Facebook</td>
-                    <td className="p-4 text-sm text-center">Nguyen, Shane</td>
-                    <td className="p-4 text-sm text-center">michael.mitc@example.com</td>
-                    <td className="p-4 text-sm text-center">-</td>
-                    <td className="p-4 text-sm text-center">-</td>
+                    <td className="p-4 text-xs text-center">Facebook</td>
+                    <td className="p-4 text-xs text-center">Nguyen, Shane</td>
+                    <td className="p-4 text-xs text-center">michael.mitc@example.com</td>
+                    <td className="p-4 text-xs text-center">-</td>
+                    <td className="p-4 text-xs text-center">-</td>
                   </tr>
                   {/* Add more data rows as needed */}
                 </tbody>

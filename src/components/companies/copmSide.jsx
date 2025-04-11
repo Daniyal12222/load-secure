@@ -12,7 +12,7 @@ function CompSide() {
             </div>
             {/*  */}
             <div className='w-full hidden  md:flex justify-center  pt-6'>
-                <div className=' bg-amber-400 flex justify-between items-center px-6 py-4 rounded-2xl w-40'>
+                <div className=' bg-amber-400 flex justify-between items-center px-4 py-4 rounded-2xl w-40'>
                     <p className='w-40 text-md font-semibold '>Companies</p>
                     <img src={grid} alt="" className='w-4 h-4' />
                 </div>
