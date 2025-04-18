@@ -22,7 +22,7 @@ function Dside() {
       </div>
       {/*  */}
       <div className="w-full hidden  md:flex justify-center  pt-6">
-        <div className=" bg-amber-400 flex justify-between items-center px-4 py-2 rounded-xl w-40">
+        <div className=" bg-amber-300 flex justify-between items-center px-4 py-2 rounded-xl w-40">
           <p className="w-40 text-md font-semibold ">Driver</p>
           <img src={grid} alt="" className="w-5 h-5" />
         </div>

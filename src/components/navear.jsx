@@ -3,6 +3,8 @@ import { useLocation } from "react-router-dom";
 import avatar from "../assets/profile.png";
 import { Link } from "react-router-dom";
 import EditProfile from "./profile";
+import Switch from "./darkmode";
+
 
 function Navbar() {
   const location = useLocation();
@@ -29,17 +31,7 @@ function Navbar() {
     console.log(storedTheme);
   }, []);
 
-  const toggleTheme = () => {
-    if (theme === "dark") {
-      document.documentElement.classList.remove("dark");
-      localStorage.setItem("theme", "light");
-      setTheme("light");
-    } else {
-      document.documentElement.classList.add("dark");
-      localStorage.setItem("theme", "dark");
-      setTheme("dark");
-    }
-  };
+
 
   const navItems = [
     { name: "Order", path: "/" },
@@ -54,7 +46,7 @@ function Navbar() {
 
   return (
     <div
-      className={`w-full relative dark:bg-amber-400 dark:text-black bg-white shadow-md`}
+      className={`w-full relative dark:bg-amber-400 dark:text-black bg-white `}
     >
       {open && <EditProfile onClose={handleClose} />}
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -65,7 +57,7 @@ function Navbar() {
               <Link
                 to={item.path}
                 key={item.path}
-                className={`cursor-pointer hover:!underline text-sm  md:text-base ${
+                className={`cursor-pointer hover:!underline text-sm dark:!text-black   md:text-base ${
                   activePage === item.path
                     ? "!font-bold !text-amber-400 dark:!text-black !underline"
                     : "hover:!text-amber-400 dark:hover:!text-black"
@@ -108,12 +100,7 @@ function Navbar() {
                 <p className="text-xs text-gray-400">john@doe.com</p>
               </div>
             </div>
-            <button
-              onClick={toggleTheme}
-              className="  !p-2 !border  dark:!bg-amber-400 top-4 right-2 "
-            >
-              {theme === "dark" ? "☀️" : "🌑"}
-            </button>
+            <Switch/>
           </div>
         </div>
       </nav>

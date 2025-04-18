@@ -97,7 +97,7 @@ function Documents() {
             <div className="w-full px-4 py-2 bg-amber-400 rounded-md">
               <p className="font-semibold text-black">Template</p>
             </div>
-            <div className="w-full grid grid-cols-4">
+            <div className="w-full grid grid-cols-2 md:grid-cols-4">
               <div className="flex rounded mt-2 p-3">
                 <div className="w-full dark:bg-[#2d353a] dark:text-white ps-2 bg-gray-100 flex items-center justify-center">
                   <img src={pdficon} alt="pdf" className="w-10 h-fit" />
@@ -151,7 +151,7 @@ function Documents() {
             <div className="w-full px-4 py-2 bg-amber-400 rounded-md">
               <p className="font-semibold">Documents</p>
             </div>
-            <div className="w-full grid grid-cols-4">
+            <div className="w-full grid  grid-cols-2 md:grid-cols-4">
               {/* pdf */}
               <div className="flex mt-2 p-3">
                 <div
@@ -541,7 +541,7 @@ function PdfD({ onClose }) {
       onClick={onClose}
     >
       <div
-        className="w-[60vw] dark:bg-[#363f42] grid grid-cols-3 gap-2 bg-white p-5 h-[80vh]"
+        className="w-[90vw] md:w-[60vw] dark:bg-[#363f42] grid grid-cols-3 gap-2 bg-white p-5 h-[80vh]"
         onClick={(e) => e.stopPropagation()} // Prevent close when clicking inside
       >
         {/* Left: Detail */}

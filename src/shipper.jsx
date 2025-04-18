@@ -80,19 +80,19 @@ function Shipper() {
               <table className="w-full dark:bg-[#363f42] dark:text-white bg-white rounded-md  ">
                 <thead>
                   <tr className="bg-neutral-100 dark:bg-amber-400 px-2 py-2">
-                    <td className="text-sm text-center text-neutral-500 p-3">
+                    <td className="text-sm text-center dark:text-black text-neutral-500 p-3">
                     Shipper Company Name
                     </td>
-                    <td className="text-sm text-center text-neutral-500 p-3">
+                    <td className="text-sm text-center dark:text-black text-neutral-500 p-3">
                     Admin Name
                     </td>
-                    <td className="text-sm text-center text-neutral-500 p-3">
+                    <td className="text-sm text-center dark:text-black text-neutral-500 p-3">
                     Admin Email
                     </td>
-                    <td className="text-sm text-center text-neutral-500 p-3">
+                    <td className="text-sm text-center dark:text-black text-neutral-500 p-3">
                     Package
                     </td>
-                    <td className="text-sm text-center text-neutral-500 p-3">
+                    <td className="text-sm text-center dark:text-black text-neutral-500 p-3">
                     Status
                     </td>
                   </tr>

@@ -3,9 +3,24 @@ import { useEffect, useState } from "react";
 import Logo from "../assets/logo.png";
 import avatar from "../assets/profile.png";
 import { Belicon } from "./navear";
+import Switch from "./darkmode";
 
 function Snavbar() {
   const [activePage, setActivePage] = useState("");
+  const storedTheme = localStorage.getItem("theme");
+  const [theme, setTheme] = useState("light");
+
+
+  useEffect(() => {
+    if (storedTheme === "dark") {
+      document.documentElement.classList.add("dark");
+      setTheme("dark");
+    } else {
+      document.documentElement.classList.remove("dark");
+      setTheme("light");
+    }
+    console.log(storedTheme);
+  }, []);
 
   useEffect(() => {
     setActivePage(location.pathname);
@@ -38,7 +53,7 @@ function Snavbar() {
               key={item.path}
               className={`cursor-pointer hover:!underline text-sm md:text-base ${
                 activePage === item.path
-                  ? "!font-bold !text-amber-400 dark:!text-black !underline"
+                  ? "!font-bold !text-amber-400 dark:!text-black  !underline"
                   : "hover:!text-amber-400 dark:hover:!text-black"
               }`}
               style={{ color: "gray" }}
@@ -50,7 +65,7 @@ function Snavbar() {
       </nav>
 
       {/* Profile & Notifications */}
-      <div  className="flex items-center space-x-4">
+      <div className="flex items-center space-x-4">
         {/* Notification Icon */}
         <Belicon />
         {/* User Profile */}
@@ -62,6 +77,7 @@ function Snavbar() {
           />
           <p className="text-xs font-semibold text-black">John Doe</p>
         </div>
+        <Switch />
       </div>
     </div>
   );

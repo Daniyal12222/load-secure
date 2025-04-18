@@ -51,8 +51,8 @@ function App() {
             </label>
             <button
               onClick={handleOpen}
-              className=" flex gap-3"
-              style={{ backgroundColor: "#ffbb00" }}
+              className=" flex gap-3 !bg-amber-300  px-4 py-2 rounded-md"
+              
             >
               <p>
                 <svg
@@ -525,13 +525,6 @@ function SearchCompani({ onClose }) {
             </div>
           </div>
         </div>
-        {/* Close Button */}
-        <button
-          onClick={onClose}
-          className="absolute dark:!bg-[#2d353a] dark:text-white top-5 right-5 text-black hover:text-red-500 text-xl font-bold"
-        >
-          ×
-        </button>
       </div>
     </div>
   );

@@ -1,18 +1,18 @@
 import App from "./App";
 import React from "react";
 import User from "./user";
-import Group from "./group"
+import Group from "./group";
 import Login from "./login";
 import Driver from "./driver";
-import Metrics from "./metrics";
 import Shipper from "./shipper";
+import Metrics from "./metrics";
+import Documents from "./Document"
 import Companies from "./companies";
 import ReactDOM from "react-dom/client";
 import Details from "./components/orders/details";
-import { BrowserRouter, Routes, Route } from "react-router";
 import ShipmentForm from "./components/shipers/shipmentinfo";
-import Documents from "./Document"
 
+import { BrowserRouter, Routes, Route } from "react-router";
 const root = document.getElementById("root");
 
 ReactDOM.createRoot(root).render(
