@@ -30,7 +30,7 @@ function Navbar({ toggleTheme, currentTheme }) {
 
   return (
     <div
-      className={`w-full relative dark:bg-amber-300 dark:text-black bg-white `}
+      className={`w-full z-10 relative dark:bg-amber-300 dark:text-black bg-white `}
     >
       {open && <EditProfile onClose={handleClose} />}
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -112,7 +112,7 @@ export function Belicon() {
       </svg>
       <div className=" bg-amber-300 dark:bg-red-500 rounded-full border-2 border-white absolute  -right-2 px-1 -top-2"><p className="dark:text-white text-xs">4</p></div>
       {isOpen && (
-      <div className=" absolute dark:bg-[#2d353a] dark:text-white overflow-y-auto scrollbar max-h-[90vh] -right-15 rounded  top-13  z-100 border bg-white w-[25vw] p-3 ">
+      <div className=" absolute dark:bg-[#2d353a] dark:text-white overflow-y-auto scrollbar max-h-[90vh] -right-32 rounded  top-13  z-100 border bg-white w-[25vw] p-3 ">
         <p className="w-full  font-semibold text-center">Notification</p>
         <p className="w-full text-xs font-semibold dark:text-neutral-400 text-neutral-500 text-end">
           Mark all read
