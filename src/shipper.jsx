@@ -37,8 +37,7 @@ function Shipper() {
               />
             </label>
             <button
-              className=" flex gap-3"
-              style={{ backgroundColor: "#ffbb00" }}
+              className=" flex gap-3 !bg-amber-300  px-4 py-2 rounded-md"
             >
               <p>
                 <svg
