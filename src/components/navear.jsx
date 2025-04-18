@@ -6,11 +6,9 @@ import EditProfile from "./profile";
 import Switch from "./darkmode";
 
 
-function Navbar() {
+function Navbar({ toggleTheme, currentTheme }) {
   const location = useLocation();
   const [activePage, setActivePage] = useState("");
-  const [theme, setTheme] = useState("light");
-  const storedTheme = localStorage.getItem("theme");
   const [open, setOpen] = useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
@@ -18,20 +16,6 @@ function Navbar() {
   useEffect(() => {
     setActivePage(location.pathname);
   }, [location.pathname]);
-
-  // dark mode
-  useEffect(() => {
-    if (storedTheme === "dark") {
-      document.documentElement.classList.add("dark");
-      setTheme("dark");
-    } else {
-      document.documentElement.classList.remove("dark");
-      setTheme("light");
-    }
-    console.log(storedTheme);
-  }, []);
-
-
 
   const navItems = [
     { name: "Order", path: "/" },
@@ -100,7 +84,7 @@ function Navbar() {
                 <p className="text-xs text-gray-400">john@doe.com</p>
               </div>
             </div>
-            <Switch/>
+            <Switch toggleTheme={toggleTheme} currentTheme={currentTheme} />
           </div>
         </div>
       </nav>

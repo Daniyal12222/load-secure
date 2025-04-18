@@ -16,7 +16,7 @@ function UserSide() {
         <img
           src={theme === "dark" ? WhiteLogo : Logo}
           alt=""
-          className="w-30 "
+          className="w-[150px] "
         />
       </div>
       {/*  */}

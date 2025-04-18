@@ -12,7 +12,7 @@ import ReactDOM from "react-dom/client";
 import Details from "./components/orders/details";
 import ShipmentForm from "./components/shipers/shipmentinfo";
 
-import { BrowserRouter, Routes, Route } from "react-router";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 const root = document.getElementById("root");
 
 ReactDOM.createRoot(root).render(

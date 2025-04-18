@@ -28,7 +28,7 @@ function User() {
                 type="text"
                 id="search"
                 placeholder="Search Ouders"
-                className=" w-full px-3 py-2 rounded focus:outline-none border dark:placeholder:text-white dark:placeholder:text-xs  border-neutral-300"
+                className=" w-full px-3 bg-white/0 py-2 rounded focus:outline-none border dark:placeholder:text-white dark:placeholder:text-xs  border-neutral-300"
               />
             </label>
             <button

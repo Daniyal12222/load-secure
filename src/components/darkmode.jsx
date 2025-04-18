@@ -1,40 +1,40 @@
 import React from "react";
 import { useState, useEffect } from "react";
 
- function Switch() {
-  const [theme, setTheme] = useState("light");
-  const storedTheme = localStorage.getItem("theme");
-  // dark mode
+function Switch({ toggleTheme: toggleThemeFromProps, currentTheme }) {
+  const [theme, setTheme] = useState(currentTheme || localStorage.getItem("theme") || "light");
+  
   useEffect(() => {
-    if (storedTheme === "dark") {
-      document.documentElement.classList.add("dark");
-      setTheme("dark");
-    } else {
-      document.documentElement.classList.remove("dark");
-      setTheme("light");
+    if (currentTheme) {
+      setTheme(currentTheme);
     }
-    console.log(storedTheme);
-  }, []);
+  }, [currentTheme]);
 
-  const toggleTheme = () => {
-    if (theme === "dark") {
-      document.documentElement.classList.remove("dark");
-      localStorage.setItem("theme", "light");
-      setTheme("light");
+  const handleToggleTheme = () => {
+    if (toggleThemeFromProps) {
+      toggleThemeFromProps();
     } else {
-      document.documentElement.classList.add("dark");
-      localStorage.setItem("theme", "dark");
-      setTheme("dark");
+      const newTheme = theme === "dark" ? "light" : "dark";
+      setTheme(newTheme);
+      
+      if (newTheme === "dark") {
+        document.documentElement.classList.add("dark");
+      } else {
+        document.documentElement.classList.remove("dark");
+      }
+      
+      localStorage.setItem("theme", newTheme);
     }
   };
+
   return (
     <button
-      onClick={toggleTheme}
-      className="  !p-2 !border  dark:!bg-amber-400 top-4 right-2 "
+      onClick={handleToggleTheme}
+      className="p-2 border rounded-full dark:!bg-amber-400 dark:!border-black border-amber-300"
     >
       {theme === "dark" ? "☀️" : "🌑"}
     </button>
   );
-};
+}
 
 export default Switch;

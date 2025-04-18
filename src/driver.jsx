@@ -31,7 +31,7 @@ function Driver() {
                 type="text"
                 id="search"
                 placeholder="Search Ouders"
-                className=" w-full px-3 py-2 rounded focus:outline-none border border-neutral-300  dark:placeholder:text-white dark:placeholder:text-xs dark:border-gray-900"
+                className=" w-full px-3 bg-white/0 py-2 rounded focus:outline-none border border-neutral-300  dark:placeholder:text-white dark:placeholder:text-xs dark:border-gray-900"
               />
             </label>
             <button

@@ -5,10 +5,23 @@ import { useEffect, useState } from "react";
 
 function App() {
   const navigate = useNavigate();
-  const [theme, setTheme] = useState("light");
+  const [theme, setTheme] = useState(localStorage.getItem("theme") || "light");
   const [open, setOpen] = useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
+
+  useEffect(() => {
+    if (theme === "dark") {
+      document.documentElement.classList.add("dark");
+    } else {
+      document.documentElement.classList.remove("dark");
+    }
+    localStorage.setItem("theme", theme);
+  }, [theme]);
+
+  const toggleTheme = () => {
+    setTheme(theme === "light" ? "dark" : "light");
+  };
 
   const handleClick = () => {
     navigate("/details", { replace: true });
@@ -20,7 +33,7 @@ function App() {
       <div className="hidden md:block"></div>
       {open && <SearchCompani onClose={handleClose} />}
       <div className=" w-full md:w-5/6 flex flex-col h-[100vh] overflow-y-auto orders">
-        <Navbar /> {/* Add your navigation bar here */}
+        <Navbar toggleTheme={toggleTheme} currentTheme={theme} />
         <div className=" md:hidden">
           <OderSide />
         </div>
@@ -46,7 +59,7 @@ function App() {
                 type="text"
                 id="search"
                 placeholder="Search Ouders"
-                className=" w-full px-3 py-2 rounded focus:outline-none border border-neutral-300  dark:placeholder:text-white dark:placeholder:text-xs dark:border-gray-900"
+                className=" w-full px-3 py-2 bg-white/0 rounded focus:outline-none border border-neutral-300  dark:placeholder:text-white dark:placeholder:text-xs dark:border-gray-900"
               />
             </label>
             <button

@@ -26,7 +26,7 @@ function Documents() {
               <label className="absolute text-xs text-gray-400 dark:!bg-[#2d353a] dark:text-white bg-white left-3 -top-2">
                 Type
               </label>
-              <select className="px-6 py-2 rounded border border-gray-300">
+              <select className="px-6 bg-white/0 py-2 rounded border border-gray-300">
                 <option value="all">All</option>
               </select>
             </div>
@@ -35,7 +35,7 @@ function Documents() {
               <label className="absolute text-xs text-gray-400 dark:!bg-[#2d353a] dark:text-white bg-white left-3 -top-2">
                 Modified
               </label>
-              <select className="px-6 py-2 rounded border border-gray-300">
+              <select className="px-6 bg-white/0 py-2 rounded border border-gray-300">
                 <option value="all">All</option>
               </select>
             </div>
@@ -63,7 +63,7 @@ function Documents() {
                   type="text"
                   id="search"
                   placeholder="Search Ouders"
-                  className="w-full px-3 py-2 rounded focus:outline-none border border-neutral-300"
+                  className="w-full bg-white/0 px-3 py-2 rounded focus:outline-none border border-neutral-300"
                 />
               </label>
               <button

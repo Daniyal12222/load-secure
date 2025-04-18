@@ -17,7 +17,7 @@ const CalendarComponent = () => {
       {/* Dropdown */}
       <div className="mt-3">
         <p className="text-sm py-2">Company</p>
-        <select className="w-full p-2 border  dark:text-white rounded-md text-gray-700">
+        <select className="w-full p-2 border bg-white/0  dark:text-white rounded-md text-gray-700">
           <option className="dark:text-white">Select Company</option>
           <option className="dark:!text-white" value="company1">Company 1</option>
           <option className="dark:!text-white" value="company2">Company 2</option>
