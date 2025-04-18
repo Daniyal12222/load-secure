@@ -46,7 +46,7 @@ function Navbar() {
 
   return (
     <div
-      className={`w-full relative dark:bg-amber-400 dark:text-black bg-white `}
+      className={`w-full relative dark:bg-amber-300 dark:text-black bg-white `}
     >
       {open && <EditProfile onClose={handleClose} />}
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -59,8 +59,8 @@ function Navbar() {
                 key={item.path}
                 className={`cursor-pointer hover:!underline text-sm dark:!text-black   md:text-base ${
                   activePage === item.path
-                    ? "!font-bold !text-amber-400 dark:!text-black !underline"
-                    : "hover:!text-amber-400 dark:hover:!text-black"
+                    ? "!font-bold !text-amber-300 dark:!text-black !underline"
+                    : "hover:!text-amber-300 dark:hover:!text-black"
                 }`}
                 style={{ color: "gray" }}
               >
@@ -126,7 +126,7 @@ export function Belicon() {
           clipRule="evenodd"
         />
       </svg>
-      <div className=" bg-amber-400 dark:bg-red-500 rounded-full border-2 border-white absolute  -right-2 px-1 -top-2"><p className="dark:text-white text-xs">4</p></div>
+      <div className=" bg-amber-300 dark:bg-red-500 rounded-full border-2 border-white absolute  -right-2 px-1 -top-2"><p className="dark:text-white text-xs">4</p></div>
       {isOpen && (
       <div className=" absolute dark:bg-[#2d353a] dark:text-white overflow-y-auto scrollbar max-h-[90vh] -right-15 rounded  top-13  z-100 border bg-white w-[25vw] p-3 ">
         <p className="w-full  font-semibold text-center">Notification</p>
@@ -134,25 +134,25 @@ export function Belicon() {
           Mark all read
         </p>
         {/* message */}
-        <div className="w-full  border-2 rounded p-2 border-amber-400 mt-2">
+        <div className="w-full  border-2 rounded p-2 border-amber-300 mt-2">
           <p className="text-sm dark:!text-white text-neutral-500 py-0.5">New Message</p>
           <p className="text-sm dark:!text-white text-neutral-500 py-0.5">PO#130366-1 Aemaniner message </p>
           <p className="text-sm dark:!text-white text-neutral-500 py-0.5">empty</p>
           <p className="text-sm dark:text-neutral-300 text-neutral-700 text-end">an hour ago</p>
         </div>
-        <div className="w-full  border-2 rounded p-2 border-amber-400 mt-2">
+        <div className="w-full  border-2 rounded p-2 border-amber-300 mt-2">
           <p className="text-sm dark:!text-white text-neutral-500 py-0.5">New Message</p>
           <p className="text-sm dark:!text-white text-neutral-500 py-0.5">PO#130366-1 Aemaniner message </p>
           <p className="text-sm dark:!text-white text-neutral-500 py-0.5">empty</p>
           <p className="text-sm dark:text-neutral-300 text-neutral-700 text-end">an hour ago</p>
         </div>
-        <div className="w-full  border-2 rounded p-2 border-amber-400 mt-2">
+        <div className="w-full  border-2 rounded p-2 border-amber-300 mt-2">
           <p className="text-sm dark:!text-white text-neutral-500 py-0.5">New Message</p>
           <p className="text-sm dark:!text-white text-neutral-500 py-0.5">PO#130366-1 Aemaniner message </p>
           <p className="text-sm dark:!text-white text-neutral-500 py-0.5">empty</p>
           <p className="text-sm dark:text-neutral-300 text-neutral-700 text-end">an hour ago</p>
         </div>
-        <div className="w-full  border-2 rounded p-2 border-amber-400 mt-2">
+        <div className="w-full  border-2 rounded p-2 border-amber-300 mt-2">
           <p className="text-sm dark:!text-white text-neutral-500 py-0.5">New Message</p>
           <p className="text-sm dark:!text-white text-neutral-500 py-0.5">PO#130366-1 Aemaniner message </p>
           <p className="text-sm dark:!text-white text-neutral-500 py-0.5">empty</p>

@@ -74,7 +74,7 @@ function App() {
             </button>
           </div>
           <div className="w-full flex justify-center items-center relative  mt-3">
-            <div className="w-14 h-14 dark:text-white bg-amber-400 rounded-full fixed right-10 bottom-10 flex justify-center items-center cursor-pointer">
+            <div className="w-14 h-14 dark:text-white bg-amber-300 rounded-full fixed right-10 bottom-10 flex justify-center items-center cursor-pointer">
               <p>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -93,7 +93,7 @@ function App() {
             <div className="w-full px-3 dark:bg-[#363f42] bg-white py-3 rounded-md overflow-x-auto">
               <table className="w-full dark:bg-[#363f42] dark:text-white  bg-white rounded-md ">
                 <thead className="p-4 !rounded-lg">
-                  <tr className="bg-neutral-100 text-xs dark:bg-amber-400 rounded-lg  px-2 ">
+                  <tr className="bg-neutral-100 text-xs dark:bg-amber-300 rounded-lg  px-2 ">
                     <td className="text-xs dark:text-black  text-center text-neutral-500 p-3">
                       Employee Status
                     </td>

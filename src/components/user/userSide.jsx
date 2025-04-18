@@ -1,17 +1,28 @@
 import Logo from "../../assets/logo.png";
 import grid from "../../assets/grid.svg";
+import WhiteLogo from "../../assets/whiteLogs.png";
+import { useState , useEffect } from "react";
 
 function UserSide() {
+  const [theme, setTheme] = useState("dark");
+  useEffect(() => {
+    setTheme(localStorage.getItem("theme"));
+  }, [theme]);
+
   return (
     <div className=" w-[100vw] md:w-1/6 dark:bg-[#363f42] md:h-[100vh]  md:overflow-y-auto scrollbar   bg-white">
       {/* logo */}
-      <div className="w-full hidden  md:flex justify-center pt-6 relative">
-        <img src={Logo} alt="" className="w-30 " />
+      <div className="w-full hidden  md:flex justify-center pt-3 relative">
+        <img
+          src={theme === "dark" ? WhiteLogo : Logo}
+          alt=""
+          className="w-30 "
+        />
       </div>
       {/*  */}
       <div className="w-full hidden  md:flex justify-center  pt-6">
-        <div className=" bg-amber-400 flex justify-between items-center px-4 py-2 rounded-lg w-40">
-          <p className="w-30 text-md font-semibold ">User</p>
+      <div className=" bg-amber-300 flex justify-between items-center px-4 py-2 rounded-xl w-40">
+          <p className="w-40 text-md font-semibold ">Shiper</p>
           <img src={grid} alt="" className="w-5 h-5" />
         </div>
       </div>
@@ -21,7 +32,7 @@ function UserSide() {
         </div>
         <div className="w-full p-4 flex flex-col gap-3">
           <div className="flex items-center gap-3">
-            <p className="text-amber-400 ">
+            <p className="text-amber-300 ">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
@@ -38,7 +49,7 @@ function UserSide() {
             <p className="dark:!text-white">All</p>
           </div>
           <div className="flex items-center gap-3">
-            <p className="text-amber-400 ">
+            <p className="text-amber-300 ">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
@@ -55,7 +66,7 @@ function UserSide() {
             <p className="dark:!text-white">Company</p>
           </div>
           <div className="flex items-center gap-3">
-            <p className="text-amber-400 ">
+            <p className="text-amber-300 ">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"

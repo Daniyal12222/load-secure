@@ -37,8 +37,7 @@ function Companies() {
               />
             </label>
             <button
-              className=" flex gap-3"
-              style={{ backgroundColor: "#ffbb00" }}
+              className=" flex gap-3 !bg-amber-300  px-4 py-2 rounded-md"
             >
               <p>
                 <svg
@@ -60,7 +59,7 @@ function Companies() {
             </button>
           </div>
           <div className="w-full  flex justify-center items-center relative  mt-3">
-            <div className="w-14 h-14 bg-amber-400 rounded-full fixed right-10 bottom-10 flex justify-center items-center cursor-pointer">
+            <div className="w-14 h-14 bg-amber-300 rounded-full fixed right-10 bottom-10 flex justify-center items-center cursor-pointer">
               <p className="dark:!text-white">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -79,7 +78,7 @@ function Companies() {
             <div className="w-full px-3 dark:bg-[#363f42] bg-white py-3 rounded-md overflow-x-auto">
               <table className="w-full dark:bg-[#363f42] dark:text-white bg-white rounded-md  ">
                 <thead>
-                  <tr className="bg-neutral-100 dark:bg-amber-400 px-2 py-2">
+                  <tr className="bg-neutral-100 dark:bg-amber-300 px-2 py-2">
                     <td className="text-sm text-center dark:!text-black text-neutral-500 p-3">
                       Company Name
                     </td>

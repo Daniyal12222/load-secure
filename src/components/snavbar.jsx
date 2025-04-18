@@ -4,6 +4,7 @@ import Logo from "../assets/logo.png";
 import avatar from "../assets/profile.png";
 import { Belicon } from "./navear";
 import Switch from "./darkmode";
+import WhiteLogo from "../assets/whiteLogs.png";
 
 function Snavbar() {
   const [activePage, setActivePage] = useState("");
@@ -38,10 +39,10 @@ function Snavbar() {
   ];
 
   return (
-    <div className="w-full dark:bg-amber-400 flex flex-wrap bg-white items-center justify-between border-b border-neutral-300 px-3 py-1">
+    <div className="w-full dark:bg-amber-300 flex flex-wrap bg-white items-center justify-between border-b border-neutral-300 px-3 py-1">
       {/* Logo */}
       <div className="px-4 py-2">
-        <img src={Logo} alt="Logo" className="w-24 sm:w-25" />
+        <img src={theme === "dark" ? WhiteLogo : Logo} alt="Logo" className="w-24 sm:w-25" />
       </div>
 
       {/* Navigation Links */}
@@ -51,10 +52,10 @@ function Snavbar() {
             <Link
               to={item.path}
               key={item.path}
-              className={`cursor-pointer hover:!underline text-sm md:text-base ${
+              className={`cursor-pointer hover:!underline dark:!text-black text-sm md:text-base ${
                 activePage === item.path
-                  ? "!font-bold !text-amber-400 dark:!text-black  !underline"
-                  : "hover:!text-amber-400 dark:hover:!text-black"
+                  ? "!font-bold !text-amber-300 dark:!text-black  !underline"
+                  : "hover:!text-amber-300 dark:hover:!text-black"
               }`}
               style={{ color: "gray" }}
             >

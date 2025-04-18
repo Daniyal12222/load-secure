@@ -327,7 +327,7 @@ function Details() {
                 className="px-1  w-full focus:outline-none placeholder:text-sm"
                 placeholder="Write message here..."
               />
-              <button className=" !bg-amber-400 text-white w-16 h-12 !p-0 flex justify-center items-center !rounded-full">
+              <button className=" !bg-amber-300 text-white w-16 h-12 !p-0 flex justify-center items-center !rounded-full">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"

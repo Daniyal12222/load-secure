@@ -24,7 +24,7 @@ const EditProfile = ({onClose}) => {
         onClick={(e) => e.stopPropagation()} // Prevent close when clicking inside
       >
          <div className="max-w-xl mx-auto dark:bg-[#394246] dark:text-white  shadow-lg rounded-2xl overflow-hidden  bg-white  ">
-      <div className="flex bg-amber-400 px-3 py-3 items-center justify-between mb-4">
+      <div className="flex bg-amber-300 px-3 py-3 items-center justify-between mb-4">
         <h2 className="text-xl font-semibold text-gray-800">Edit Profile</h2>
         <button className="!bg-white/0 !p-2 !text-gray-900">
           <svg className=" size-5" fill="none" stroke="currentColor" strokeWidth="2"
@@ -74,7 +74,7 @@ const EditProfile = ({onClose}) => {
             <label className="inline-flex items-center  cursor-pointer">
               <input type="checkbox" className="sr-only" checked={access[key]} onChange={() => toggleAccess(key)} />
               <div className={`w-10 h-5  flex items-center rounded-full p-1 transition-colors duration-300
-                ${access[key] ? 'bg-yellow-500' : 'bg-gray-300'}`}>
+                ${access[key] ? 'bg-yellow-300' : 'bg-gray-300'}`}>
                 <div className={`bg-white w-4 h-4 rounded-full shadow transform transition-transform
                   ${access[key] ? 'translate-x-5' : 'translate-x-0'}`}></div>
               </div>
@@ -85,7 +85,7 @@ const EditProfile = ({onClose}) => {
 
       <div className="flex justify-center gap-3 py-2 px-4">
         <button className="px-4 py-1.5 border rounded-md text-sm !text-gray-700 hover:!bg-gray-100">Cancel</button>
-        <button className="px-4 py-1.5 !bg-yellow-500 text-white !text-sm rounded-md hover:!bg-yellow-600">Save</button>
+        <button className="px-4 py-1.5 !bg-yellow-300 text-white !text-sm rounded-md hover:!bg-yellow-600">Save</button>
       </div>
     </div>
 

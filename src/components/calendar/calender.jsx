@@ -41,8 +41,8 @@ const CalendarComponent = () => {
             key={date}
             className={`py-2 text-sm cursor-pointer rounded-md ${
               selectedDates.includes(date)
-                ? "bg-yellow-500 text-white"
-                : "hover:bg-yellow-100"
+                ? "bg-amber-300 text-white"
+                : "hover:bg-amber-100"
             }`}
             onClick={() => handleDateClick(date)}
           >
@@ -54,7 +54,7 @@ const CalendarComponent = () => {
       {/* Buttons */}
       <div className="flex justify-between mt-4">
         <button className="border px-4 py-2 text-black rounded-md">Reset</button>
-        <button className="!bg-yellow-500 text-white px-4 py-2 rounded-md hover:bg-yellow-600">
+        <button className="!bg-amber-300 text-white px-4 py-2 rounded-md hover:bg-amber-300">
           Search
         </button>
       </div>

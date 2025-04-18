@@ -76,7 +76,7 @@ function Driver() {
             <div className="w-full px-3 dark:bg-[#363f42]  bg-white py-3 rounded-md overflow-x-auto">
               <table className="w-full bg-white dark:bg-[#363f42] dark:text-white rounded-md  ">
                 <thead>
-                  <tr className="bg-neutral-100 dark:bg-amber-400 px-2 py-2" >
+                  <tr className="bg-neutral-100 dark:bg-amber-300 px-2 py-2" >
                     <td className="text-sm dark:text-black text-center text-neutral-500 p-3">
                       Name
                     </td>

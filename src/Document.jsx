@@ -67,8 +67,7 @@ function Documents() {
                 />
               </label>
               <button
-                className="flex gap-3 text-black px-4 py-2 text-sm rounded"
-                style={{ backgroundColor: "#ffbb00" }}
+                className="flex gap-3 text-black !bg-amber-300 px-4 py-2 text-sm rounded"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -94,7 +93,7 @@ function Documents() {
         <div className="w-full bg-white dark:bg-[#363f42]   rounded-md mt-5 p-2">
           {/* Template Section */}
           <div className="w-full">
-            <div className="w-full px-4 py-2 bg-amber-400 rounded-md">
+            <div className="w-full px-4 py-2 bg-amber-300 rounded-md">
               <p className="font-semibold text-black">Template</p>
             </div>
             <div className="w-full grid grid-cols-2 md:grid-cols-4">
@@ -148,7 +147,7 @@ function Documents() {
 
           {/* Documents Section */}
           <div className="w-full mt-6">
-            <div className="w-full px-4 py-2 bg-amber-400 rounded-md">
+            <div className="w-full px-4 py-2 bg-amber-300 rounded-md">
               <p className="font-semibold">Documents</p>
             </div>
             <div className="w-full grid  grid-cols-2 md:grid-cols-4">
@@ -560,7 +559,7 @@ function PdfD({ onClose }) {
               </div>
             </div>
             <div className="w-full mt-4 rounded bg-black">
-              <div className="w-40 h-1 bg-amber-400 rounded"></div>
+              <div className="w-40 h-1 bg-amber-300 rounded"></div>
             </div>
             <div className="w-full p-2">
               <table className="w-full text-xs">
@@ -616,7 +615,7 @@ function PdfD({ onClose }) {
 
         {/* Right: Empty for now */}
         <div className="rounded p-5 dark:bg-[#2d353a]  bg-gray-100">
-          <div className="w-full px-4 py-2 rounded bg-amber-400 ">
+          <div className="w-full px-4 py-2 rounded bg-amber-300 ">
             <p className="font-semibold">History</p>
           </div>
           <div className="mt-5 dark:text-white">

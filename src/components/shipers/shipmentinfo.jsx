@@ -10,7 +10,7 @@ export default function ShipmentForm() {
     <div className="flex flex-col dark:bg-[#363f42] items-center min-h-screen bg-gray-100 ">
       <Snavbar />
       <div className="w-full px-30 py-5 relative">
-        <div className="w-16 h-16 bg-amber-400 rounded-full fixed right-10 bottom-8 flex justify-center items-center cursor-pointer">
+        <div className="w-16 h-16 bg-amber-300 rounded-full fixed right-10 bottom-8 flex justify-center items-center cursor-pointer">
           <p className=" dark:text-white">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -31,7 +31,7 @@ export default function ShipmentForm() {
           <div className="absolute top-[12px] left-8 right-8 h-1 bg-gray-300 z-0 rounded-full">
           {/* Filled Progress Line */}
           <div
-            className=" h-1 bg-amber-400 z-10 rounded-full transition-all duration-500"
+            className=" h-1 bg-amber-300 z-10 rounded-full transition-all duration-500"
             style={{
               width:
                 step === 1
@@ -53,7 +53,7 @@ export default function ShipmentForm() {
               <div className="w-7 h-7 rounded-full flex justify-center items-center bg-amber-100">
                 <div
                   className={`w-4 h-4 rounded-full ${
-                    step > index ? "bg-amber-400" : "bg-gray-300"
+                    step > index ? "bg-amber-300" : "bg-gray-300"
                   }`}
                 ></div>
               </div>
@@ -145,7 +145,7 @@ function ShipmentIn({ nextStep }) {
         </div>
         <button
           type="button"
-          className="text-yellow-500 dark:!bg-white/0  bg-white flex gap-2 items-center !text-sm"
+          className="text-yellow-300 dark:!bg-white/0  bg-white flex gap-2 items-center !text-sm"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -177,7 +177,7 @@ function ShipmentIn({ nextStep }) {
             <label className="block dark:text-white text-gray-700 mb-1 text-sm">
               Shipper*
             </label>
-            <p className="text-amber-400 text-sm">+ Add</p>
+            <p className="text-amber-300 text-sm">+ Add</p>
           </div>
           <input
             type="text"
@@ -190,7 +190,7 @@ function ShipmentIn({ nextStep }) {
           </button>
           <button
             onClick={nextStep}
-            className="px-3 py-1 !bg-yellow-500 !font-extralight dark:text-white rounded text-sm"
+            className="px-3 py-1 !bg-yellow-300 !font-extralight dark:text-white rounded text-sm"
           >
             Next
           </button>
@@ -273,7 +273,7 @@ function PickUp({ prevStep, nextStep }) {
             </textarea>
           </div>
           <div className="w-full flex">
-            <button className="!text-sm  dark:!bg-white/0 !px-2 !bg-white ms-2 text-amber-400 flex gap-2">
+            <button className="!text-sm  dark:!bg-white/0 !px-2 !bg-white ms-2 text-amber-300 flex gap-2">
               <span>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -292,7 +292,7 @@ function PickUp({ prevStep, nextStep }) {
               </span>
               Add Address
             </button>
-            <button className="!text-sm dark:!bg-white/0 !px-2 !bg-white ms-2 text-amber-400 flex gap-2">
+            <button className="!text-sm dark:!bg-white/0 !px-2 !bg-white ms-2 text-amber-300 flex gap-2">
               <span>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -341,7 +341,7 @@ function PickUp({ prevStep, nextStep }) {
           </button>
           <button
             onClick={nextStep}
-            className="px-3 py-1 !bg-yellow-500 !font-extralight dark:text-white rounded text-sm"
+            className="px-3 py-1 !bg-yellow-300 !font-extralight dark:text-white rounded text-sm"
           >
             Next
           </button>
@@ -421,7 +421,7 @@ function DropOff({ prevStep, nextStep }) {
             </textarea>
           </div>
           <div className="w-full flex">
-            <button className="!text-sm  dark:!bg-white/0 !px-2 bg-white ms-2 text-amber-400 flex gap-2">
+            <button className="!text-sm  dark:!bg-white/0 !px-2 bg-white ms-2 text-amber-300 flex gap-2">
               <span>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -470,7 +470,7 @@ function DropOff({ prevStep, nextStep }) {
           </button>
           <button
             onClick={nextStep}
-            className="px-3 py-1 !bg-yellow-500 !font-extralight dark:text-white rounded text-sm"
+            className="px-3 py-1 !bg-yellow-300 !font-extralight dark:text-white rounded text-sm"
           >
             Next
           </button>
@@ -573,7 +573,7 @@ function Preview({ prevStep }) {
         >
           Back
         </button>
-        <button className="!px-5 py-1 !bg-yellow-500 !font-extralight dark:text-white rounded text-sm">
+        <button className="!px-5 py-1 !bg-yellow-300 !font-extralight dark:text-white rounded text-sm">
           Fnish
         </button>
       </div>

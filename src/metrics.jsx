@@ -13,7 +13,7 @@ function Metrics() {
         <div className="w-full">
           <table className="w-full dark:bg-[#363f42] dark:text-white bg-white rounded-md  ">
             <thead>
-              <tr className="bg-neutral-100 dark:bg-amber-400 px-2 py-2">
+              <tr className="bg-neutral-100 dark:bg-amber-300 px-2 py-2">
                 <td className="text-sm dark:text-black text-center text-neutral-500 p-3">
                   Results For
                 </td>

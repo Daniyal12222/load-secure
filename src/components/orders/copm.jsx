@@ -26,7 +26,7 @@ const ActivityFeed = () => {
           {activities.map((activity, index) => (
             <div key={index} className="flex items-start gap-2 mb-3">
               <div className="relative">
-                <div className="w-2.5 h-2.5 bg-yellow-500 rounded-full"></div>
+                <div className="w-2.5 h-2.5 bg-yellow-300 rounded-full"></div>
                 {index !== activities.length - 1 && (
                   <div className="w-0.5 bg-gray-300 h-full absolute left-1/2 top-2.5"></div>
                 )}

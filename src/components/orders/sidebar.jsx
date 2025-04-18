@@ -38,7 +38,7 @@ function OderSide() {
             className="md:w-full flex gap-3 justify-between items-center w-full cursor-pointer"
             onClick={() => toggleMenu("Shipment Status")}
           >
-            <p className="text-[#ffbb00] ">
+            <p className="text-amber-300 ">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
@@ -107,7 +107,7 @@ function OderSide() {
             className="w-full flex gap-3 text-xs justify-between  items-center cursor-pointer"
             onClick={() => toggleMenu("On-Time Slots")}
           >
-            <p className="text-[#ffbb00] ">
+            <p className="text-amber-300 ">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
@@ -175,7 +175,7 @@ function OderSide() {
             className="w-full flex gap-3 text-xs justify-between  items-center cursor-pointer"
             onClick={() => toggleMenu("Driver Status")}
           >
-            <p className="text-[#ffbb00] ">
+            <p className="text-amber-300 ">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
@@ -243,7 +243,7 @@ function OderSide() {
             className="w-full flex justify-between text-xs gap-3 items-center cursor-pointer"
             onClick={() => toggleMenu("PO Owner")}
           >
-            <p className="text-[#ffbb00] ">
+            <p className="text-amber-300 ">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
