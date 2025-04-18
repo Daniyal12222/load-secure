@@ -94,7 +94,7 @@ function ShipmentIn({ nextStep }) {
           </label>
           <input
             type="text"
-            className="w-full p-1 focus:outline-none dark:text-white border border-gray-300 rounded text-sm"
+            className="w-full p-1 focus:outline-none dark:text-white border border-gray-300 rounded text-sm bg-white/0"
           />
         </div>
         <div className="grid grid-cols-2 gap-3">
@@ -104,7 +104,7 @@ function ShipmentIn({ nextStep }) {
             </label>
             <input
               type="text"
-              className="w-full p-1 focus:outline-none dark:text-white border border-gray-300 rounded text-sm"
+              className="w-full p-1 focus:outline-none dark:text-white border border-gray-300 rounded text-sm bg-white/0"
             />
           </div>
           <div>
@@ -113,7 +113,7 @@ function ShipmentIn({ nextStep }) {
             </label>
             <input
               type="text"
-              className="w-full p-1 focus:outline-none dark:text-white border border-gray-300 rounded text-sm"
+              className="w-full p-1 focus:outline-none dark:text-white border border-gray-300 rounded text-sm bg-white/0"
             />
           </div>
         </div>
@@ -123,7 +123,7 @@ function ShipmentIn({ nextStep }) {
           </label>
           <input
             type="text"
-            className="w-full p-1 focus:outline-none dark:text-white border border-gray-300 rounded text-sm"
+            className="w-full p-1 focus:outline-none dark:text-white border border-gray-300 rounded text-sm bg-white/0"
           />
         </div>
         <div>
@@ -135,12 +135,12 @@ function ShipmentIn({ nextStep }) {
           </div>
           <input
             type="text"
-            className="w-full p-1 focus:outline-none dark:text-white border border-gray-300 rounded text-sm"
+            className="w-full p-1 focus:outline-none dark:text-white border border-gray-300 rounded text-sm bg-white/0"
           />
           <input
             type="text"
             placeholder="Driver"
-            className="w-full p-1 focus:outline-none my-2 dark:text-white border border-gray-300 rounded text-sm"
+            className="w-full p-1 focus:outline-none my-2 dark:text-white border border-gray-300 rounded text-sm bg-white/0"
           />
         </div>
         <button
@@ -169,7 +169,7 @@ function ShipmentIn({ nextStep }) {
           </label>
           <input
             type="text"
-            className="w-full p-1 focus:outline-none dark:text-white border border-gray-300 rounded text-sm"
+            className="w-full p-1 focus:outline-none dark:text-white border border-gray-300 rounded text-sm bg-white/0"
           />
         </div>
         <div>
@@ -181,7 +181,7 @@ function ShipmentIn({ nextStep }) {
           </div>
           <input
             type="text"
-            className="w-full p-1 focus:outline-none dark:text-white border border-gray-300 rounded text-sm"
+            className="w-full p-1 focus:outline-none dark:text-white border border-gray-300 rounded text-sm bg-white/0"
           />
         </div>
         <div className="flex justify-center gap-5 mt-3">
@@ -215,7 +215,7 @@ function PickUp({ prevStep, nextStep }) {
               </label>
               <input
                 type="date"
-                className="w-full p-2 focus:outline-none dark:text-white border border-gray-300 rounded text-sm"
+                className="w-full p-2 focus:outline-none dark:text-white border border-gray-300 rounded text-sm bg-white/0"
               />
             </div>
             <div>
@@ -224,7 +224,7 @@ function PickUp({ prevStep, nextStep }) {
               </label>
               <input
                 type="time"
-                className="w-full p-2 focus:outline-none dark:text-white border border-gray-300 rounded text-sm"
+                className="w-full p-2 focus:outline-none dark:text-white border border-gray-300 rounded text-sm bg-white/0"
               />
             </div>
             <div>
@@ -234,7 +234,7 @@ function PickUp({ prevStep, nextStep }) {
               <select
                 name=""
                 id=""
-                className="w-full p-2 focus:outline-none dark:text-white border border-gray-300 rounded text-sm"
+                className="w-full p-2 focus:outline-none dark:text-white border border-gray-300 rounded text-sm bg-white/0"
               >
                 <option value="">Select Time Zone</option>
                 <option value="EST">EST</option>
@@ -268,7 +268,7 @@ function PickUp({ prevStep, nextStep }) {
                 />
               </svg>
             </p>
-            <textarea className=" focus:outline-none text-sm  border rounded-md h-[20vh] text-black dark:text-white resize-none p-3 w-[100%]">
+            <textarea className=" focus:outline-none text-sm  border rounded-md h-[20vh] text-black dark:text-white resize-none p-3 w-[100%] bg-white/0">
               123 Main St. New York, NY 10001
             </textarea>
           </div>
@@ -363,7 +363,7 @@ function DropOff({ prevStep, nextStep }) {
               </label>
               <input
                 type="date"
-                className="w-full p-2 focus:outline-none dark:text-white border border-gray-300 rounded text-sm"
+                className="w-full p-2 focus:outline-none dark:text-white border border-gray-300 rounded text-sm bg-white/0"
               />
             </div>
             <div>
@@ -372,7 +372,7 @@ function DropOff({ prevStep, nextStep }) {
               </label>
               <input
                 type="time"
-                className="w-full p-2 focus:outline-none dark:text-white border border-gray-300 rounded text-sm"
+                className="w-full p-2 focus:outline-none dark:text-white border border-gray-300 rounded text-sm bg-white/0"
               />
             </div>
             <div>
@@ -382,7 +382,7 @@ function DropOff({ prevStep, nextStep }) {
               <select
                 name=""
                 id=""
-                className="w-full p-2 focus:outline-none dark:text-white border border-gray-300 rounded text-sm"
+                className="w-full p-2 focus:outline-none dark:text-white border border-gray-300 rounded text-sm bg-white/0"
               >
                 <option value="">Select Time Zone</option>
                 <option value="EST">EST</option>
@@ -416,7 +416,7 @@ function DropOff({ prevStep, nextStep }) {
                 />
               </svg>
             </p>
-            <textarea className=" focus:outline-none text-sm dark:!text-white  border rounded-md h-[20vh] !text-black resize-none p-3 w-[100%]">
+            <textarea className=" focus:outline-none text-sm dark:!text-white  border rounded-md h-[20vh] !text-black resize-none p-3 w-[100%] bg-white/0">
               123 Main St. New York, NY 10001
             </textarea>
           </div>
@@ -561,7 +561,7 @@ function Preview({ prevStep }) {
         <select
           name=""
           id=""
-          className="mt-2 dark:text-white focus:outline-none border border-gray-400 p-2 rounded"
+          className="mt-2 dark:text-white focus:outline-none border border-gray-400 p-2 rounded bg-white/0"
         >
           <option value="immediately">Immediately</option>
         </select>

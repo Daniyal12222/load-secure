@@ -263,10 +263,10 @@ function Details() {
           </div>
           <div className="  col-span-2  rounded ">
           <div className="  flex flex-col md:flex-row p-3 dark:bg-[#2d353a]   dark:text-white bg-white rounded gap-3    ">
-          <select className="w-full max-w-xs px-4 py-3 border rounded">
+          <select className="w-full bg-white/0 max-w-xs px-4 py-3 border rounded">
             <option value="in-transit">In-Transit</option>
           </select>
-          <select className="w-full max-w-xs px-4 py-3 border rounded">
+          <select className="w-full bg-white/0 max-w-xs px-4 py-3 border rounded">
             <option value="action">Actions</option>
           </select>
         </div>
@@ -324,7 +324,7 @@ function Details() {
               </p>
               <input
                 type="text"
-                className="px-1  w-full focus:outline-none placeholder:text-sm"
+                className="px-1 bg-white/0 w-full focus:outline-none placeholder:text-sm"
                 placeholder="Write message here..."
               />
               <button className=" !bg-amber-300 text-white w-16 h-12 !p-0 flex justify-center items-center !rounded-full">

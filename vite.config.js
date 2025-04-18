@@ -6,4 +6,5 @@ export default defineConfig({
   plugins: [
     react()
   ],
+  base: './',  // This sets the base path to relative instead of absolute
 })

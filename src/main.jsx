@@ -6,13 +6,14 @@ import Login from "./login";
 import Driver from "./driver";
 import Shipper from "./shipper";
 import Metrics from "./metrics";
-import Documents from "./Document"
+import Documents from "./Document";
 import Companies from "./companies";
 import ReactDOM from "react-dom/client";
 import Details from "./components/orders/details";
 import ShipmentForm from "./components/shipers/shipmentinfo";
-
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+
+
 const root = document.getElementById("root");
 
 ReactDOM.createRoot(root).render(
